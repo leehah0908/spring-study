@@ -6,9 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 // 스프링에게 객체 생성 등의 제어를 맡길 때 사용하는 아노테이션.
 // 수동으로 Bean(객체)를 등록할 때 클래스에 선언하는 문법.
-@Configuration("app")
+//@Configuration("app")
 public class AppConfig {
 
+    /*
     // 셰프 객체 생성
     @Bean // 메서드에서 특정 객체가 생성되어 리턴될 때, 객체의 생명 주기를 Spring이 관리하도록 설정.
     public Chef chef1() {
@@ -47,4 +48,5 @@ public class AppConfig {
     public Hotel hotel() {
         return new Hotel(restaurant1(), chef1());
     }
+    */
 }
