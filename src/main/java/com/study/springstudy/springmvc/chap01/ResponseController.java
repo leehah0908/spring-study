@@ -1,4 +1,4 @@
-package com.study.springstudy.chap01;
+package com.study.springstudy.springmvc.chap01;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

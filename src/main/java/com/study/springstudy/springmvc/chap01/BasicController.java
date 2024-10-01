@@ -1,4 +1,4 @@
-package com.study.springstudy.chap01;
+package com.study.springstudy.springmvc.chap01;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
