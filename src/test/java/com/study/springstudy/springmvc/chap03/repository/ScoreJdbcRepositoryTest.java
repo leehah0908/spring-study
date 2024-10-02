@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap03.repository;
 
+import com.study.springstudy.springmvc.chap03.dto.ScoreModifyDTO;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDTO;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import org.junit.jupiter.api.DisplayName;
@@ -34,7 +35,7 @@ class ScoreJdbcRepositoryTest {
         // given -> 테스트에 필요한 값을 세팅
 
         // when -> 테스트 주요 코드 실행
-        List<Score> allList = repository.findAll();
+        List<Score> allList = repository.findAll("num");
 
         // then -> 테스트 결과 검증 (Assertion: 단언기법)
         assertEquals(allList.size(), 2);
@@ -70,5 +71,25 @@ class ScoreJdbcRepositoryTest {
 
         // then
         assertNull(score);
+    }
+
+    @Test
+    @DisplayName("데이터 업데이트 테스트 -> 영어, 수학 점수만 변경")
+    void updateTest() {
+        // given
+        int stuNum = 7;
+        int eng = 90;
+        int math = 95;
+        Score score = repository.findOne(stuNum);
+        ScorePostDTO dto = new ScorePostDTO(score.getStuName(), score.getKor(), eng, math);
+
+        // when
+        Score score2 = new Score(dto);
+        score2.setStuNum((stuNum)); // 번호 초기화
+        repository.update(score2);
+
+        // then
+        Score changeScore = repository.findOne(stuNum);
+        assertNotEquals(score, changeScore);
     }
 }

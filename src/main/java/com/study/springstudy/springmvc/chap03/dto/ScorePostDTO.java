@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ScorePostDTO {
-    // 넘어오는 변수명과 똑같이 설정 (SQL, Entity에서 쓰는거X)
+    // 넘어오는 변수명(jsp 파일에서 사용하는 변수명)과 똑같이 설정 (SQL, Entity에서 쓰는거 X)
     private String name;
     private int kor;
     private int eng;

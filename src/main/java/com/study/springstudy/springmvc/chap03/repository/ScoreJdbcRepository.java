@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap03.repository;
 
+import com.study.springstudy.springmvc.chap03.dto.ScoreModifyDTO;
 import com.study.springstudy.springmvc.chap03.entity.Grade;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 import lombok.RequiredArgsConstructor;
@@ -55,8 +56,20 @@ public class ScoreJdbcRepository implements ScoreRepository {
     }
 
     @Override
-    public List<Score> findAll() {
+    public List<Score> findAll(String sort) {
         String sql = "select * from score";
+
+        switch (sort) {
+            case "num":
+                sql += " order by stu_num";
+                break;
+            case "name":
+                sql += " order by stu_name";
+                break;
+            case "avg":
+                sql += " order by average desc";
+                break;
+        }
 
         // 여러 행이 조회될 때는 query()를 호출
         // sql, RowMapper 인터페이스를 구현한 객체를 전달
@@ -82,4 +95,16 @@ public class ScoreJdbcRepository implements ScoreRepository {
 
         jdbcTemplate.update(sql, stuNum);
     }
+
+    @Override
+    public void update(Score score) {
+        String sql = "update score " +
+                "set kor = ?, eng = ?, math = ?, total = ?, average = ?, grade = ? " +
+                "where stu_num = ?";
+
+        jdbcTemplate.update(sql,
+                score.getKor(), score.getEng(), score.getMath(), score.getTotal(),
+                score.getAverage(), score.getGrade().toString(), score.getStuNum());
+    }
 }
+
