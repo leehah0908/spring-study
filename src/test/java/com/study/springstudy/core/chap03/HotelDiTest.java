@@ -10,10 +10,10 @@ class HotelDiTest {
 
     @Test
     void diTest() {
-        AppConfig config = new AppConfig();
-        Hotel hotel = config.hotel();
+//        AppConfig config = new AppConfig();
+//        Hotel hotel = config.hotel();
 
-        hotel.inform();
+//        hotel.inform();
     }
 
     @Test

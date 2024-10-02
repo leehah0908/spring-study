@@ -1,6 +1,8 @@
 package com.study.springstudy.springmvc.chap03.repository;
 
-import com.study.springstudy.springmvc.chap03.entitiy.Score;
+import com.study.springstudy.springmvc.chap03.entity.Score;
+
+import java.util.List;
 
 // 역할: 적당한 저장소에 CRUD하는 역할
 // 얘가 자체적으로 하는 게 아닌, 기능만 명세
@@ -12,9 +14,12 @@ public interface ScoreRepository {
     void save(Score score);
 
     // 저장소에서 데이터 전체조회하기
+    List<Score> findAll();
 
     // 저장소에서 데이터 개별조회하기
+    Score findOne(int stuNum);
 
     // 저장소에서 데이터 삭제하기
+    void delete(int stuNum);
 
 }
