@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap03.service;
 
-import com.study.springstudy.springmvc.chap03.dto.ScoreModifyDTO;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDTO;
 import com.study.springstudy.springmvc.chap03.dto.ScoreResponseDTO;
 import com.study.springstudy.springmvc.chap03.entity.Score;

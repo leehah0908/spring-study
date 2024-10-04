@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap03.repository;
 
-import com.study.springstudy.springmvc.chap03.dto.ScoreModifyDTO;
 import com.study.springstudy.springmvc.chap03.entity.Score;
 
 import java.util.List;

@@ -1,23 +1,14 @@
 package com.study.springstudy.springmvc.chap03.controller;
 
-import com.study.springstudy.springmvc.chap03.dto.ScoreModifyDTO;
 import com.study.springstudy.springmvc.chap03.dto.ScorePostDTO;
-import com.study.springstudy.springmvc.chap03.dto.ScoreResponseDTO;
-import com.study.springstudy.springmvc.chap03.entity.Score;
-import com.study.springstudy.springmvc.chap03.repository.ScoreJdbcRepository;
 import com.study.springstudy.springmvc.chap03.service.ScoreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping("/score")
@@ -100,6 +91,7 @@ public class ScoreController {
     // 수정값으로 값 수정(db update)
     // 수정이 완료되면 수정된 학생의 상세 페이지를 보여줘야 함
     // GetMapping랑 PostMapping이기 때문에 경로랑 메서드 이름이 같아도 상관없음!
+    // jsp 파일 -> form -> action에서 /score/modify로 post했잖슴~
     @PostMapping("/modify")
     public String modify(ScorePostDTO dto, // kor, math, eng는 dto로 받음
                          @RequestParam int stuNum) { // stuNum은 dto가 못받으니까 따로 받음
