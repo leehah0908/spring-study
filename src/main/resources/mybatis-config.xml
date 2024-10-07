@@ -9,17 +9,20 @@
         <setting name="mapUnderscoreToCamelCase" value="true"/>
 
         <!-- 조회된 결과가 없을 시 null을 리턴해주는 설정 -->
+        <!-- ex) 삭제시 조회가 안되면 에러가 아닌 null값을 리턴해주기 위해-->
         <setting name="jdbcTypeForNull" value="NULL"/>
     </settings>
 
     <typeAliases>
         <!-- 엔터티 클래스 별칭 붙이기 -->
         <typeAlias type="com.study.springstudy.springmvc.chap04.entity.Score" alias="score"/>
+        <typeAlias type="com.study.springstudy.springmvc.chap05.entity.Board" alias="board"/>
     </typeAliases>
 
     <mappers>
         <!-- SQL을 적어놓은 XML 파일의 위치를 설정 -->
         <mapper resource="mapper/ScoreMapper.xml"/>
+        <mapper resource="mapper/BoardMapper.xml"/>
     </mappers>
 
 </configuration>
