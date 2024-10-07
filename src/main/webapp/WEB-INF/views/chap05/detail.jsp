@@ -122,7 +122,7 @@
 <body>
 <%@include file="../include/header.jsp" %>
 <div id="wrap" class="form-container">
-    <h1>${b.boardNo}번 게시물 내용~ </h1>
+    <h1>${b.boardNo}번 게시물 내용 </h1>
     <h2># 작성일자: ${b.regDate}</h2>
     <label for="writer">작성자</label>
     <input type="text" id="writer" name="writer" value="${b.writer}" readonly>
@@ -132,7 +132,7 @@
     <div id="content">${b.content}</div>
     <div class="buttons">
         <button class="list-btn" type="button"
-                onclick="location.href='/board/list'">
+                onclick="location.href='/board/list?pageNo=${p.pageNo}&amount=${p.amount}'">
             목록
         </button>
     </div>

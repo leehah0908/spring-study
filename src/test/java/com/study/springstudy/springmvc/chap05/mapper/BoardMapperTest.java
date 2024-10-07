@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
+import com.study.springstudy.springmvc.chap05.dto.PageDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -26,7 +27,7 @@ class BoardMapperTest {
 //    @BeforeEach
     @Test
     void bulkInsert() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 300; i++) {
             Board b = new Board();
             b.setTitle("테스트 제목" + i);
             b.setWriter("글쓴이" + i);
@@ -37,16 +38,18 @@ class BoardMapperTest {
     }
 
     @Test
-    @DisplayName("게시물 조회 테스트 -> 전체 조회를 하면 게시물 갯수는 3개")
+    @DisplayName("게시물 조회 테스트(페이징 조회)")
     void findAllTest() {
         // given
+        PageDTO pageDTO = new PageDTO(); // pageNo: 1, amount: 6
+        pageDTO.setPageNo(15);
 
         // when
-        List<Board> boardList = mapper.findAll();
+        List<Board> boardList = mapper.findAll(pageDTO);
 
         // then
         boardList.forEach(System.out::println);
-        assertEquals(3, boardList.size());
+        assertEquals(6, boardList.size());
     }
 
     @Test

@@ -1,15 +1,15 @@
 package com.study.springstudy.springmvc.chap05.controller;
 
 import com.study.springstudy.springmvc.chap05.dto.BoardDetailResponseDTO;
-import com.study.springstudy.springmvc.chap05.dto.BoardListResponseDTO;
 import com.study.springstudy.springmvc.chap05.dto.BoardWriteRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.PageDTO;
 import com.study.springstudy.springmvc.chap05.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.Map;
 
 /*
 1. 목록 조회 요청(/board/list: GET)
@@ -52,9 +52,11 @@ public class BoardController {
 
     // 목록 조회
     @GetMapping("/list")
-    public String list(Model model) {
-        List<BoardListResponseDTO> list = boardService.getList();
-        model.addAttribute("bList", list);
+    public String list(PageDTO pageDTO,
+                       Model model) {
+        Map<String, Object> map = boardService.getList(pageDTO);
+        model.addAttribute("bList", map.get("bList"));
+        model.addAttribute("maker", map.get("pm"));
         return "chap05/list";
     }
 
@@ -74,9 +76,12 @@ public class BoardController {
     // 글 상세 보기
     @GetMapping("/detail/{bno}")
     public String detail(@PathVariable int bno,
+                         // 모델 객체에 직접 데이터를 담는 로직을 생략할 수 있음
+                         @ModelAttribute("p") PageDTO page,
                          Model model) {
         BoardDetailResponseDTO dto = boardService.detail(bno);
         model.addAttribute("b", dto);
+//        model.addAttribute("p", page);
         return "chap05/detail";
     }
 

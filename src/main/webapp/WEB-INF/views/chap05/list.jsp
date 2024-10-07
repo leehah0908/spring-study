@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -35,9 +36,9 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                     </form>
                 </div>
                 <div class="amount">
-                    <div><a href="#">6</a></div>
-                    <div><a href="#">18</a></div>
-                    <div><a href="#">30</a></div>
+                    <div><a href="/board/list?pageNo=1&amount=6">6</a></div>
+                    <div><a href="/board/list?pageNo=1&amount=18">18</a></div>
+                    <div><a href="/board/list?pageNo=1&amount=30">30</a></div>
                 </div>
             </div>
 
@@ -75,13 +76,52 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                 <!-- 페이지 버튼 영역 -->
                 <nav aria-label="Page navigation example">
                     <ul class="pagination pagination-lg pagination-custom">
-                        <li class="page-item"><a class="page-link" href="#">&lt;&lt;</a></li>
-                        <li class="page-item"><a class="page-link" href="#">prev</a></li>
-                        <li data-page-num="" class="page-item">
-                            <a class="page-link" href="#">${i}</a>
+                        <li class="page-item">
+                            <a
+                                class="page-link"
+                                href="/board/list?pageNo=1&amount=${maker.page.amount}"
+                                >&lt;&lt;</a
+                            >
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">next</a></li>
-                        <li class="page-item"><a class="page-link" href="#">&gt;&gt;</a></li>
+
+                        <c:if test="${maker.prev}">
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="/board/list?pageNo=${maker.begin - 1}&amount=${maker.page.amount}"
+                                    >prev</a
+                                >
+                            </li>
+                        </c:if>
+
+                        <!-- fori 반목문이고, step은 기본값이 1이고, 생략이 가능함 -->
+                        <c:forEach var="i" begin="${maker.begin}" end="${maker.end}">
+                            <li data-page-num="${i}" class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="/board/list?pageNo=${i}&amount=${maker.page.amount}"
+                                    >${i}</a
+                                >
+                            </li>
+                        </c:forEach>
+
+                        <c:if test="${maker.next}">
+                            <li class="page-item">
+                                <a
+                                    class="page-link"
+                                    href="/board/list?pageNo=${maker.end + 1}&amount=${maker.page.amount}"
+                                    >next</a
+                                >
+                            </li>
+                        </c:if>
+
+                        <li class="page-item">
+                            <a
+                                class="page-link"
+                                href="/board/list?pageNo=${maker.finalPage}&amount=${maker.page.amount}"
+                                >&gt;&gt;</a
+                            >
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -153,7 +193,10 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                 console.log("글번호" + bno);
 
                 // 서버에 요청 보내기 (파라미터가 아닌 경로로 보낼 수도 았음)
-                location.href = "/board/detail/" + bno;
+                location.href =
+                    "/board/detail/" +
+                    bno +
+                    "?pageNo=${maker.page.pageNo}&amount=${maker.page.amount}";
             });
 
             function removeDown(e) {
@@ -192,6 +235,24 @@ uri="http://java.sun.com/jsp/jstl/core"%>
             document.querySelector(".add-btn").onclick = (e) => {
                 window.location.href = "/board/write";
             };
+
+            // 사용지기 현제 머물고 있는 페이지 버튼에 active 스타일 구현 <- 현재 페이지에 맞는 li에 active 요소 추가하기 -> 동적으로 처리하기 위해
+            function appendPageActive() {
+                // 현재 서버에서 넘겨준 페이지 번호 얻기
+                const currentPage = "${maker.page.pageNo}";
+
+                // ul을 지목하고, ul의 자식들을 배열로 받음
+                const $ul = document.querySelector(".pagination");
+                const $liList = [...$ul.children]; // 유사배열이기 때문에 배열로 재처리해야 함
+
+                $liList.forEach(($li) => {
+                    if (currentPage === $li.dataset.pageNum) {
+                        $li.classList.add("active");
+                    }
+                });
+            }
+
+            appendPageActive();
         </script>
     </body>
 </html>
