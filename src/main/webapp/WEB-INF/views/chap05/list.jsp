@@ -29,16 +29,33 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                             <option value="writer">작성자</option>
                             <option value="tc">제목+내용</option>
                         </select>
-                        <input type="text" class="form-control" name="keyword" />
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="keyword"
+                            value="${s.keyword}"
+                        />
                         <button class="btn btn-primary" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
                 </div>
                 <div class="amount">
-                    <div><a href="/board/list?pageNo=1&amount=6">6</a></div>
-                    <div><a href="/board/list?pageNo=1&amount=18">18</a></div>
-                    <div><a href="/board/list?pageNo=1&amount=30">30</a></div>
+                    <div>
+                        <a href="/board/list?pageNo=1&amount=6&type=${s.type}&keyword=${s.keyword}"
+                            >6</a
+                        >
+                    </div>
+                    <div>
+                        <a href="/board/list?pageNo=1&amount=18&type=${s.type}&keyword=${s.keyword}"
+                            >18</a
+                        >
+                    </div>
+                    <div>
+                        <a href="/board/list?pageNo=1&amount=30&type=${s.type}&keyword=${s.keyword}"
+                            >30</a
+                        >
+                    </div>
                 </div>
             </div>
 
@@ -79,7 +96,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                         <li class="page-item">
                             <a
                                 class="page-link"
-                                href="/board/list?pageNo=1&amount=${maker.page.amount}"
+                                href="/board/list?pageNo=1&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}"
                                 >&lt;&lt;</a
                             >
                         </li>
@@ -88,7 +105,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                             <li class="page-item">
                                 <a
                                     class="page-link"
-                                    href="/board/list?pageNo=${maker.begin - 1}&amount=${maker.page.amount}"
+                                    href="/board/list?pageNo=${maker.begin - 1}&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}"
                                     >prev</a
                                 >
                             </li>
@@ -99,7 +116,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                             <li data-page-num="${i}" class="page-item">
                                 <a
                                     class="page-link"
-                                    href="/board/list?pageNo=${i}&amount=${maker.page.amount}"
+                                    href="/board/list?pageNo=${i}&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}"
                                     >${i}</a
                                 >
                             </li>
@@ -109,7 +126,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                             <li class="page-item">
                                 <a
                                     class="page-link"
-                                    href="/board/list?pageNo=${maker.end + 1}&amount=${maker.page.amount}"
+                                    href="/board/list?pageNo=${maker.end + 1}&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}"
                                     >next</a
                                 >
                             </li>
@@ -118,7 +135,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                         <li class="page-item">
                             <a
                                 class="page-link"
-                                href="/board/list?pageNo=${maker.finalPage}&amount=${maker.page.amount}"
+                                href="/board/list?pageNo=${maker.finalPage}&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}"
                                 >&gt;&gt;</a
                             >
                         </li>
@@ -196,7 +213,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                 location.href =
                     "/board/detail/" +
                     bno +
-                    "?pageNo=${maker.page.pageNo}&amount=${maker.page.amount}";
+                    "?pageNo=${s.pageNo}&amount=${s.amount}&type=${s.type}&keyword=${s.keyword}";
             });
 
             function removeDown(e) {
@@ -252,7 +269,19 @@ uri="http://java.sun.com/jsp/jstl/core"%>
                 });
             }
 
+            function appendSelect() {
+                const $select = document.getElementById("search-type");
+                const $options = [...$select.children];
+
+                $options.forEach(($opt) => {
+                    if ($opt.value === "${s.type}") {
+                        $opt.setAttribute("selected", "selected");
+                    }
+                });
+            }
+
             appendPageActive();
+            appendSelect();
         </script>
     </body>
 </html>

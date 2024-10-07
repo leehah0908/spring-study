@@ -4,6 +4,22 @@
 
 <mapper namespace="com.study.springstudy.springmvc.chap05.mapper.BoardMapper">
 
+    <sql id="search">
+        <if test="type == 'title'">
+            where title like concat('%', #{keyword}, '%')
+        </if>
+        <if test="type == 'content'">
+            where content like concat('%', #{keyword}, '%')
+        </if>
+        <if test="type == 'writer'">
+            where writer like concat('%', #{keyword}, '%')
+        </if>
+        <if test="type == 'tc'">
+            where (title like concat('%', #{keyword}, '%')) or (content like concat('%', #{keyword}, '%'))
+        </if>
+
+    </sql>
+
     <!-- 게시물 등록 -->
     <insert id="save">
         insert into tbl_board
@@ -29,6 +45,7 @@
     <select id="findAll" resultType="board">
         select *
         from tbl_board
+        <include refid="search" />
         order by board_no desc
         limit #{pageStart}, #{amount}
     </select>
@@ -40,9 +57,10 @@
         where board_no = #{boardNo}
     </select>
 
-    <!-- 전체 게시글 갯수 조회 -->
+    <!-- 검색 결과에 따른 글 개수 세기 (검색이 안된 상태이면 전체 글 개수 조회) -->
     <select id="getCount" resultType="int">
         select count(*)
         from tbl_board
+        <include refid="search" />
     </select>
 </mapper>

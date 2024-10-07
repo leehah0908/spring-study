@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
-import com.study.springstudy.springmvc.chap05.dto.PageDTO;
+import com.study.springstudy.springmvc.chap05.dto.SearchDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,7 +10,7 @@ import java.util.List;
 public interface BoardMapper {
 
     // 목록 조회
-    List<Board> findAll(PageDTO pageDTO);
+    List<Board> findAll(SearchDTO searchDTO);
 
     // 상세 조회
     Board findOne(int boardNo);
@@ -24,6 +24,6 @@ public interface BoardMapper {
     // 조회수 처리
     void updateViewCount(int boardNo);
 
-    // 전체 게시글 갯수 조회
-    int getCount();
+    // 게시글 갯수 카운트
+    int getCount(SearchDTO searchDTO);
 }
