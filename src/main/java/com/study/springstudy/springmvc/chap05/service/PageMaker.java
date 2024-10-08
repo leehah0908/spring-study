@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.service;
 
-import com.study.springstudy.springmvc.chap05.dto.PageDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.PageDTO;
 import lombok.Getter;
 import lombok.ToString;
 

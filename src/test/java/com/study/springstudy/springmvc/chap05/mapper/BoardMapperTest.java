@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
-import com.study.springstudy.springmvc.chap05.dto.PageDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.SearchDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -41,7 +41,7 @@ class BoardMapperTest {
     @DisplayName("게시물 조회 테스트(페이징 조회)")
     void findAllTest() {
         // given
-        PageDTO pageDTO = new PageDTO(); // pageNo: 1, amount: 6
+        SearchDTO pageDTO = new SearchDTO(); // pageNo: 1, amount: 6
         pageDTO.setPageNo(15);
 
         // when

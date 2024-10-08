@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.entity;
 
-import com.study.springstudy.springmvc.chap05.dto.BoardWriteRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.BoardWriteRequestDTO;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Board {
     /*
     create table tbl_board (

@@ -1,4 +1,4 @@
-package com.study.springstudy.springmvc.chap05.dto;
+package com.study.springstudy.springmvc.chap05.dto.response;
 
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import lombok.EqualsAndHashCode;

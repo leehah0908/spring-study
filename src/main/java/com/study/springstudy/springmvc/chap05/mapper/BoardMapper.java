@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
-import com.study.springstudy.springmvc.chap05.dto.SearchDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.SearchDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import org.apache.ibatis.annotations.Mapper;
 

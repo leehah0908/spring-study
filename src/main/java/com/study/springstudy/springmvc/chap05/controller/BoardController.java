@@ -1,8 +1,8 @@
 package com.study.springstudy.springmvc.chap05.controller;
 
-import com.study.springstudy.springmvc.chap05.dto.BoardDetailResponseDTO;
-import com.study.springstudy.springmvc.chap05.dto.BoardWriteRequestDTO;
-import com.study.springstudy.springmvc.chap05.dto.SearchDTO;
+import com.study.springstudy.springmvc.chap05.dto.response.BoardDetailResponseDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.BoardWriteRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.SearchDTO;
 import com.study.springstudy.springmvc.chap05.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -85,10 +85,10 @@ public class BoardController {
         return "chap05/detail";
     }
 
+    // 글 삭제
     @PostMapping("/delete")
     public String delete(@RequestParam int boardNo) {
         boardService.delete(boardNo);
         return "redirect:/board/list";
-
     }
 }

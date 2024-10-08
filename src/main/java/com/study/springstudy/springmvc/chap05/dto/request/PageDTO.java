@@ -1,4 +1,4 @@
-package com.study.springstudy.springmvc.chap05.dto;
+package com.study.springstudy.springmvc.chap05.dto.request;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
