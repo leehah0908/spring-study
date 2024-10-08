@@ -17,12 +17,14 @@
         <!-- 엔터티 클래스 별칭 붙이기 -->
         <typeAlias type="com.study.springstudy.springmvc.chap04.entity.Score" alias="score"/>
         <typeAlias type="com.study.springstudy.springmvc.chap05.entity.Board" alias="board"/>
+        <typeAlias type="com.study.springstudy.springmvc.chap05.entity.Reply" alias="reply"/>
     </typeAliases>
 
     <mappers>
         <!-- SQL을 적어놓은 XML 파일의 위치를 설정 -->
         <mapper resource="mapper/ScoreMapper.xml"/>
         <mapper resource="mapper/BoardMapper.xml"/>
+        <mapper resource="mapper/ReplyMapper.xml"/>
     </mappers>
 
 </configuration>
