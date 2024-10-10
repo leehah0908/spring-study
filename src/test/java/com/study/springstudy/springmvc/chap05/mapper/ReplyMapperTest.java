@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
+import com.study.springstudy.springmvc.chap05.dto.request.PageDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import com.study.springstudy.springmvc.chap05.entity.Reply;
 import org.junit.jupiter.api.DisplayName;
@@ -54,7 +55,7 @@ class ReplyMapperTest {
         int boredNo = 83;
 
         // when
-        List<Reply> allList = replyMapper.findAll(boredNo);
+        List<Reply> allList = replyMapper.findAll(boredNo, new PageDTO());
 //        allList.forEach(System.out::println);
 
         // then
