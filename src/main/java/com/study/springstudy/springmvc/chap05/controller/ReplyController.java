@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap05.controller;
 
+import com.study.springstudy.springmvc.chap05.dto.response.ReplyUpdateDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.ReplyPostRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyListResponseDTO;
 import com.study.springstudy.springmvc.chap05.service.ReplyService;
@@ -36,5 +37,14 @@ public class ReplyController {
         return ResponseEntity.ok().body(replies);
     }
 
+    @PatchMapping
+    public ResponseEntity<?> update(@Validated @RequestBody ReplyUpdateDTO dto,
+                                    BindingResult result) {
+        if (result.hasErrors()){
+            return ResponseEntity.badRequest().body(result.toString());
+        }
 
+        replyService.update(dto);
+        return ResponseEntity.ok().body("Success");
+    }
 }

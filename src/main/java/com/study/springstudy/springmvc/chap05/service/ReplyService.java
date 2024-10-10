@@ -4,6 +4,7 @@ import com.study.springstudy.springmvc.chap05.dto.request.PageDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.ReplyPostRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyDetailResponseDTO;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyListResponseDTO;
+import com.study.springstudy.springmvc.chap05.dto.response.ReplyUpdateDTO;
 import com.study.springstudy.springmvc.chap05.entity.Reply;
 import com.study.springstudy.springmvc.chap05.mapper.ReplyMapper;
 import lombok.RequiredArgsConstructor;
@@ -37,6 +38,9 @@ public class ReplyService {
                 .pageInfo(new PageMaker(page, mapper.count(boardNo)))
                 .replies(dtoList)
                 .build();
+    }
 
+    public void update(ReplyUpdateDTO dto) {
+        mapper.modify(dto.toEntity());
     }
 }

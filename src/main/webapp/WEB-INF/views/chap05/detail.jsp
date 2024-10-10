@@ -211,6 +211,7 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                 </div>
             </div>
             <!-- end replies row -->
+
             <!-- 댓글 수정 모달 -->
             <div class="modal fade bd-example-modal-lg" id="replyModifyModal">
                 <div class="modal-dialog modal-lg">
@@ -420,13 +421,69 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                 });
             };
 
-            // 즉시 실행 함수를 이용해서 페이지가 로딩되면 함수가 자동 호출되도록 함 -> 우선순위를 가장 높게 하기 위해서
+            // 댓글 삭제와 수정모드 진입 이벤트 핸들러 등록
+            function replyRmModClickHandler() {
+                const $replyData = document.getElementById(".replyData");
+                replyData.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    // 댓글 번호 얻기
+                    const rno = e.target.closest("#replyContent").dataset.replyid;
+
+                    if (e.target.matches("#replyDelBtn")) {
+                    } else if (e.target.matches("#replyModBtn")) {
+                        // 기존 댓글 내용 가져와서 보여주기
+                        const replyText = e.target.parentNode.previousElementSibling.textContent;
+                        document.getElementById("modReplyText").value = replyText;
+
+                        // 댓글 번호도 모달 안에 있는 input hidden에 추가하기
+                        document.getElementById("modReplyId").value = rno;
+                    } else return;
+                });
+            }
+
+            // 모달 안에서 수정 버튼 눌렀을 때 이벤트 처리
+            function replyModifyHandler() {
+                const $modBtn = document.getElementById("replyModBtn");
+
+                $modBtn.addEventListener("click", (e) => {
+                    const payload = {
+                        rno: document.getElementById("modReplyId").value,
+                        text: document.getElementById("modReplyText").value,
+                    };
+
+                    const requestInfo = {
+                        method: "PATCH",
+                        headers: {
+                            "content-type": "application/json",
+                        },
+                        body: JSON.stringify(payload),
+                    };
+
+                    fetch(url, requestInfo).then((res) => {
+                        if (res.status === 200) {
+                            // 모달 닫기 (비동기이기 때문에 직접 닫아줘야 함)
+                            document.getElementById("modal-close").click();
+                            fetchGetReplies();
+                        } else {
+                            alert("수정값에 문제가 있습니다.");
+                            return;
+                        }
+                    });
+                });
+            }
+
+            // 즉시 실행 함수를 이용해서 페이지가 로딩되면 함수가 자동 호출되도록 함 -> 우선순위를 가장 높게 하기 위해서 (들어가자마자 실행)
             (() => {
                 // 댓글을 서버에서 불러오기
                 fetchGetReplies();
 
                 // 페이지 버튼 클릭 이벤트 등록
                 pageButtonClickHandeler();
+
+                replyRmModClickHandler();
+
+                replyModifyHandler();
             })();
         </script>
     </body>
