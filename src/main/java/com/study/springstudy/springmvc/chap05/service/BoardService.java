@@ -23,7 +23,7 @@ public class BoardService {
 
     public Map<String, Object> getList(SearchDTO searchDTO) {
         // 전체 게시글을 가지고 오는 것이 아니라 특정 페이지 부분만 가져와야 함
-        List<Board> boardList = mapper.findAll(searchDTO);
+        List<BoardDetailResponseDTO> boardList = mapper.findAll(searchDTO);
         List<BoardListResponseDTO> dtoList = boardList
                 .stream()
                 .map(BoardListResponseDTO::new)

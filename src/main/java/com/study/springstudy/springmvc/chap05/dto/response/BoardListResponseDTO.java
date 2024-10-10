@@ -1,6 +1,5 @@
 package com.study.springstudy.springmvc.chap05.dto.response;
 
-import com.study.springstudy.springmvc.chap05.entity.Board;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,14 +18,16 @@ public class BoardListResponseDTO {
     private final String regDate; // yyyy=MM=dd HH:mm
     private final int viewCount;
     private final String writer;
+    private final int replyCount;
 
-    public BoardListResponseDTO(Board board) {
+    public BoardListResponseDTO(BoardDetailResponseDTO board) {
         this.boardNo = board.getBoardNo();
         this.shortTitle = makeShortTitle(board.getTitle());
         this.shortContent = makeShortContent(board.getContent());
-        this.regDate = makePrettierDateString(board.getRegDate());
+        this.regDate = board.getRegDate();
         this.viewCount = board.getViewCount();
         this.writer = board.getWriter();
+        this.replyCount = board.getReplyCount();
     }
 
     // ============================== 메서드 구역 ==============================

@@ -431,7 +431,11 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                     const rno = e.target.closest("#replyContent").dataset.replyid;
 
                     if (e.target.matches("#replyDelBtn")) {
+                        // 삭제
+                        if (!confirm("삭제하시겠습니까?")) return;
+                        replyDeleteHandler(rno);
                     } else if (e.target.matches("#replyModBtn")) {
+                        // 수정
                         // 기존 댓글 내용 가져와서 보여주기
                         const replyText = e.target.parentNode.previousElementSibling.textContent;
                         document.getElementById("modReplyText").value = replyText;
@@ -470,6 +474,20 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                             return;
                         }
                     });
+                });
+            }
+
+            // 삭제 버튼 눌렀을 때 이벤트 처리
+            function replyDeleteHandler(rno) {
+                fetch(`\${url}/\${rno}`, {
+                    method: "DELETE",
+                }).then((res) => {
+                    if (res.status === 200) {
+                        alert("뎃글이 삭제되었습니다.");
+                        fetchGetReplies();
+                    } else {
+                        alert("잠시 후 다시 시도해주세요.");
+                    }
                 });
             }
 

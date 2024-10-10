@@ -1,6 +1,7 @@
 package com.study.springstudy.springmvc.chap05.mapper;
 
 import com.study.springstudy.springmvc.chap05.dto.request.SearchDTO;
+import com.study.springstudy.springmvc.chap05.dto.response.BoardDetailResponseDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public interface BoardMapper {
 
     // 목록 조회
-    List<Board> findAll(SearchDTO searchDTO);
+    List<BoardDetailResponseDTO> findAll(SearchDTO searchDTO);
 
     // 상세 조회
     Board findOne(int boardNo);

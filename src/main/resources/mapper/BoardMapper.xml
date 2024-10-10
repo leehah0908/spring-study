@@ -42,10 +42,14 @@
     </update>
 
     <!-- 목록 조회 -->
-    <select id="findAll" resultType="board">
-        select *
-        from tbl_board
+    <select id="findAll" resultType="com.study.springstudy.springmvc.chap05.dto.response.BoardDetailResponseDTO">
+        select
+            b.board_no, b.title, b.content,
+            b.writer, b.reg_date, b.view_count,
+            count(r.reply_no) as reply_count
+        from tbl_board B left join tbl_reply R using(board_no)
         <include refid="search" />
+        group by board_no
         order by board_no desc
         limit #{pageStart}, #{amount}
     </select>

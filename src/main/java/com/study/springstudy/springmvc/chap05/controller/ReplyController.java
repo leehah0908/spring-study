@@ -40,11 +40,22 @@ public class ReplyController {
     @PatchMapping
     public ResponseEntity<?> update(@Validated @RequestBody ReplyUpdateDTO dto,
                                     BindingResult result) {
-        if (result.hasErrors()){
+        if (result.hasErrors()) {
             return ResponseEntity.badRequest().body(result.toString());
         }
 
         replyService.update(dto);
         return ResponseEntity.ok().body("Success");
+    }
+
+    @DeleteMapping("/{replyNo}")
+    public ResponseEntity<?> delete(@PathVariable int replyNo) {
+        try {
+            replyService.delete(replyNo);
+            return ResponseEntity.ok().body("Success");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body(e.getMessage());
+        }
     }
 }
