@@ -1,15 +1,13 @@
 package com.study.springstudy.springmvc.chap05.controller;
 
 import com.study.springstudy.springmvc.chap05.dto.request.ReplyPostRequestDTO;
-import com.study.springstudy.springmvc.chap05.dto.response.ReplyDetailResponseDTO;
+import com.study.springstudy.springmvc.chap05.dto.response.ReplyListResponseDTO;
 import com.study.springstudy.springmvc.chap05.service.ReplyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/replies")
@@ -30,10 +28,12 @@ public class ReplyController {
         return ResponseEntity.ok().body("Success");
     }
 
-    @GetMapping("/{boardNo}")
-    public ResponseEntity<?> list(@PathVariable int boardNo) {
-        List<ReplyDetailResponseDTO> detailList = replyService.getList(boardNo);
-        return ResponseEntity.ok().body(detailList);
+    @GetMapping("/{boardNo}/page/{pageNo}")
+    public ResponseEntity<?> list(@PathVariable int boardNo,
+                                  @PathVariable int pageNo) {
+        ReplyListResponseDTO replies = replyService.getList(boardNo, pageNo);
+
+        return ResponseEntity.ok().body(replies);
     }
 
 

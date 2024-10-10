@@ -261,7 +261,10 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             const $addBtn = document.getElementById("replyAddBtn");
 
             // 화면에 댓글 태그들을 랜더링
-            function renderReplies(replies) {
+            function renderReplies(replyData) {
+                // 객체 디스트럭처링
+                const { count, pageInfo, replies } = replyData;
+
                 let tag = "";
 
                 if (replies !== null && replies.length > 0) {
@@ -297,16 +300,70 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
                 // 반복문을 이용해서 문자열로 박성한 tag응 댓글 영역에 div에 innerHTML로 삽입
                 document.getElementById("replyData").innerHTML = tag;
+
+                // 페이지 렌더링 함수 호출
+                renderPages(pageInfo);
+            }
+
+            // 화면에 페이지 버튼을 렌더링하는 함수
+            // 매개변수 선언부에 처음부터 디스트럭처링해서 받고 있음
+            function renderPages({ begin, end, prev, next, page, finalPage }) {
+                let tag = "";
+
+                // 이전 버튼 만들기
+                if (prev) {
+                    tag += `<li class='page-item'>
+                                <a class='page-link page-active' href='\${begin - 1}'>이전</a>
+                            </li>`;
+                }
+
+                // 페이지 번호 버튼 만들기
+                for (let i = begin; i <= end; i++) {
+                    let active = "";
+                    if (page.pageNo === i) {
+                        active = "p-active";
+                    }
+
+                    tag += `<li class='page-item \${active}'>
+                                <a class='page-link page-custom' href='\${i}'>\${i}</a>
+                            </li>`;
+                }
+
+                // 다음 버튼 만들기
+                if (next) {
+                    tag += `<li class='page-item'>
+                                <a class='page-link page-active' href='\${end + 1}'>다음</a>
+                            </li>`;
+                }
+
+                // 페이지 번호 렌더링
+                document.querySelector(".pagination").innerHTML = tag;
             }
 
             // 서버에 비동기 방식으로 댓글 목록을 받아오는 함수
-            function fetchGetReplies() {
+            function fetchGetReplies(pageNum = 1) {
                 // 자바스크립드 문자열 안에 $와 {}를 사용하면 el로 인식 -> $앞에 \를 사용해야 함
-                fetch(`\${url}/\${bno}`)
+                fetch(`\${url}/\${bno}/page/\${pageNum}`)
                     .then((res) => res.json())
                     .then((replyList) => {
                         renderReplies(replyList);
                     });
+            }
+
+            // 페이지 클릭 이벤트 핸들러 등록 함수
+            function pageButtonClickHandeler() {
+                const $pageUl = document.querySelector(".pagination");
+
+                // 버튼에 여러개 동작을 해야 할때는 addEventListener 사용 / 하나의 이벤트만을 사용할 때는 onclick 사용
+                // 근데 그냥 addEventListener 사용하는 것이 나음
+                $pageUl.addEventListener("click", (e) => {
+                    if (!e.target.matches(".page-item a")) return;
+
+                    e.preventDefault();
+
+                    // href에 작성된 각각의 페이지 번호를 가져와서 댓글 목록을 비동기 요청
+                    fetchGetReplies(e.target.getAttribute("href"));
+                });
             }
 
             // 댓글 등록
@@ -367,6 +424,9 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             (() => {
                 // 댓글을 서버에서 불러오기
                 fetchGetReplies();
+
+                // 페이지 버튼 클릭 이벤트 등록
+                pageButtonClickHandeler();
             })();
         </script>
     </body>

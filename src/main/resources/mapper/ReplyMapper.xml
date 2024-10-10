@@ -47,6 +47,7 @@
         from tbl_reply
         where board_no = #{boardNo}
         order by reply_no desc
+        limit #{page.pageStart}, #{page.amount}
     </select>
 
     <!-- 댓글 개별 조회 -->
