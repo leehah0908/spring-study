@@ -260,12 +260,53 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             const bno = "${b.boardNo}";
             const $addBtn = document.getElementById("replyAddBtn");
 
+            // 화면에 댓글 태그들을 랜더링
+            function renderReplies(replies) {
+                let tag = "";
+
+                if (replies !== null && replies.length > 0) {
+                    for (let reply of replies) {
+                        // 객체 디스트럭처링
+                        const { rno, writer, text, regDate } = reply;
+
+                        tag += `
+                            <div id='replyContent' class='card-body' data-replyId='\${rno}'>
+                                <div class='row user-block'>
+                                    <span class='col-md-8'>
+                                        <b>\${writer}</b>
+                                    </span>
+                                    <span class='col-md-4 text-right'><b>\${regDate}</b></span>
+                                </div>
+                                <br>
+                                <div class='row'>
+                                    <div class='col-md-9'>\${text}</div>
+                                    <div class='col-md-3 text-right'>
+                                        <a id='replyModBtn' class='btn btn-sm btn-outline-dark' data-bs-toggle='modal' data-bs-target='#replyModifyModal'>수정</a>&nbsp;
+                                        <a id='replyDelBtn' class='btn btn-sm btn-outline-dark' href='#'>삭제</a>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }
+                } else {
+                    tag += "<div id='replyContent' class='card-body'>댓글이 없습니다.</div>";
+                }
+
+                // 댓글 수 랜더링
+                document.getElementById("replyCnt").textContent = replies.length;
+
+                // 반복문을 이용해서 문자열로 박성한 tag응 댓글 영역에 div에 innerHTML로 삽입
+                document.getElementById("replyData").innerHTML = tag;
+            }
+
             // 서버에 비동기 방식으로 댓글 목록을 받아오는 함수
             function fetchGetReplies() {
                 // 자바스크립드 문자열 안에 $와 {}를 사용하면 el로 인식 -> $앞에 \를 사용해야 함
                 fetch(`\${url}/\${bno}`)
                     .then((res) => res.json())
-                    .then((replyList) => console.log(replyList));
+                    .then((replyList) => {
+                        renderReplies(replyList);
+                    });
             }
 
             // 댓글 등록

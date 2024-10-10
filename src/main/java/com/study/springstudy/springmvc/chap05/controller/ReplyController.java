@@ -26,10 +26,7 @@ public class ReplyController {
             return ResponseEntity.badRequest().body(result.toString());
         }
 
-        System.out.println("정상 포스트");
-        System.out.println(dto);
         replyService.register(dto);
-
         return ResponseEntity.ok().body("Success");
     }
 
