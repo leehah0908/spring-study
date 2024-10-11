@@ -7,6 +7,7 @@ import com.study.springstudy.springmvc.chap05.service.MemberService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -70,19 +71,28 @@ public class MemberController {
         return "redirect:/members/sign-in";
     }
 
+    @GetMapping("/sign-out")
+    public String signOut(HttpSession session) {
+
+        // 세션에서 로그인 정보 기록 삭제
+        session.removeAttribute("login");
+
+        // 세선 전체 무효화 (둘 중 하나 선택해서 사용)
+        session.invalidate();
+
+        return "redirect:/board/list";
+    }
 
     private void makeLoginCookie(LoginRequestDTO dto, HttpServletResponse response) {
         // 쿠키에 로그인 기록 저장
         // 쿠키 객체 생성 -> 쿠키의 이름과 저장할 값 포함 (문자열만 가능하고, 4KB 제한)
         Cookie cookie = new Cookie("login", dto.getAccount());
 
-        // 쿠키 세부 설정
         // 쿠키 소멸 설정
         cookie.setMaxAge(60); // 쿠키 수명 설정 (초)
         cookie.setPath("/"); // 이 쿠키는 모든 경로애서 유효함
 
         // 쿠키를 응답 객체에 쿠키를 포함해서 클라이언트로 전송
         response.addCookie(cookie);
-
     }
 }
