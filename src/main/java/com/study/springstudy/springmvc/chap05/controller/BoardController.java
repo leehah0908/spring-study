@@ -4,7 +4,9 @@ import com.study.springstudy.springmvc.chap05.dto.response.BoardDetailResponseDT
 import com.study.springstudy.springmvc.chap05.dto.request.BoardWriteRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.SearchDTO;
 import com.study.springstudy.springmvc.chap05.service.BoardService;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -46,6 +48,7 @@ import java.util.Map;
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/board")
+@Slf4j
 public class BoardController {
 
     private final BoardService boardService;
@@ -68,8 +71,9 @@ public class BoardController {
 
     // 글 등록
     @PostMapping("/write")
-    public String write(BoardWriteRequestDTO dto) {
-        boardService.save(dto);
+    public String write(BoardWriteRequestDTO dto,
+                        HttpSession session) {
+        boardService.save(dto, session);
         return "redirect:/board/list";
     }
 

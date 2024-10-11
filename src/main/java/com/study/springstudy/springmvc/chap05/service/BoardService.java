@@ -6,6 +6,8 @@ import com.study.springstudy.springmvc.chap05.dto.response.BoardDetailResponseDT
 import com.study.springstudy.springmvc.chap05.dto.response.BoardListResponseDTO;
 import com.study.springstudy.springmvc.chap05.entity.Board;
 import com.study.springstudy.springmvc.chap05.mapper.BoardMapper;
+import com.study.springstudy.springmvc.util.LoginUtils;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -38,8 +40,12 @@ public class BoardService {
         return result;
     }
 
-    public void save(BoardWriteRequestDTO dto) {
-        mapper.save(new Board(dto)); // dto를 엔터티로 변환해서 mapper로 전달
+    public void save(BoardWriteRequestDTO dto, HttpSession session) {
+        // 작성자 전달 X -> session에서 account 정보 가져와서 대입
+        Board board = new Board(dto);
+        board.setWriter(LoginUtils.getCurrentLoginMember(session));
+
+        mapper.save(board);
     }
 
     public BoardDetailResponseDTO detail(int bno) {

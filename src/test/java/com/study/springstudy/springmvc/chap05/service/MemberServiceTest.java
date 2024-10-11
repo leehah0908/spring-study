@@ -1,5 +1,6 @@
 package com.study.springstudy.springmvc.chap05.service;
 
+import com.study.springstudy.springmvc.chap05.dto.request.LoginRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -36,11 +37,13 @@ class MemberServiceTest {
     @DisplayName("id가 존재하지 않는 경우 테스트")
     void noAccTest() {
         // given
-        String account = "park1234";
-        String password = "aaa4321";
-        
+        LoginRequestDTO dto = LoginRequestDTO.builder()
+                .account("park1234")
+                .password("aaa4321")
+                .build();
+
         // when
-        LoginResult result = memberService.authenticate(account, password);
+        LoginResult result = memberService.authenticate(dto);
         
         // then
         assertEquals(result, LoginResult.NO_ACC);
@@ -50,11 +53,13 @@ class MemberServiceTest {
     @DisplayName("pw가 틀린 경우 테스트")
     void noPwTest() {
         // given
-        String account = "kim1234";
-        String password = "aaa4321";
+        LoginRequestDTO dto = LoginRequestDTO.builder()
+                .account("park1234")
+                .password("aaa4321")
+                .build();
 
         // when
-        LoginResult result = memberService.authenticate(account, password);
+        LoginResult result = memberService.authenticate(dto);
 
         // then
         assertEquals(result, LoginResult.NO_PW);
@@ -64,11 +69,13 @@ class MemberServiceTest {
     @DisplayName("로그인 성공 테스트")
     void successTest() {
         // given
-        String account = "kim1234";
-        String password = "aaa1233";
+        LoginRequestDTO dto = LoginRequestDTO.builder()
+                .account("park1234")
+                .password("aaa4321")
+                .build();
 
         // when
-        LoginResult result = memberService.authenticate(account, password);
+        LoginResult result = memberService.authenticate(dto);
 
         // then
         assertEquals(result, LoginResult.SUCCESS);
