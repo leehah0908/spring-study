@@ -39,4 +39,8 @@ public class MemberService {
             return SUCCESS;
         } else return NO_PW;
     }
+
+    public boolean checkIdentifier(String type, String keyword) {
+        return memberMapper.existsById(type, keyword);
+    }
 }
