@@ -1,55 +1,89 @@
-// ==================== 회원가입 입력 검증 처리 ====================
-const url = "/members/check";
-let keywordFlag = false;
+// 서버에 중복 확인 비동기 요청
+export const checkAvailability = async (type, keyword) => {
+    const response = await fetch(
+        `http://localhost:8181/members/check?type=${type}&keyword=${keyword}`
+    );
+    const flag = await response.json();
+    // 중복이면 false로 -> 좀 더 직관적으로 이해하기 쉽게
+    return !flag;
+};
 
-// 계정 중복 검사 비동기 요청 보내기
-async function fetchDuplicateCheck(type, keyword) {
-    // fetch(`\${url}?type=\${type}&keyword=\${keyword}`)
-    //     .then((res) => res.json())
-    //     .then((flag) => (keywordFlag = flag));
+// 유효성 검증에 사용될 정규표현식 패턴 정의
+// 아이디 패턴: 영문 대소문자와 숫자, 4~14글자
+const accountPattern = /^[a-zA-Z0-9]{4,14}$/;
 
-    const res = await fetch(`${url}?type=${type}&keyword=${keyword}`);
-    const flag = await res.json();
-    keywordFlag = flag;
-}
+// 비밀번호 패턴: 반드시 영문, 숫자, 특수문자를 포함하여 8자 이상
+const passwordPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*?_~])[A-Za-z\d!@#$%^&*?_~]{8,}$/;
 
-// ==================== 회원가입 입력 검증 처리 ====================
-// 아이디 검사
-// 계정 입력 검증
-const $idInput = document.getElementById("user_id");
-
-// async: 이 이벤트는 비동기라는 것을 알려줌
-$idInput.addEventListener("keyup", async (e) => {
-    const idValue = $idInput.value;
-    const accountPattern = /^[a-zA-Z0-9]{4,14}$/;
-    const $idCheck = document.getElementById("idChk");
-
-    if (idValue.trim() === "") {
-        $idInput.style.borderColor = "red";
-        $idCheck.innerHTML = '<b class="warning">[아이디는 필수값입니다.]</b>';
-    } else if (!accountPattern.test(idValue)) {
-        $idInput.style.borderColor = "red";
-        $idCheck.innerHTML = '<b class="warning">[아이디는 4 ~ 14자, 영문, 숫자로만 구성]</b>';
-    } else {
-        // 아이디 중복 검사
-        await fetchDuplicateCheck("account", idValue); // 이 함수를 실행할 때 끝날때 까지 기다려
-
-        if (keywordFlag) {
-            $idInput.style.borderColor = "red";
-            $idCheck.innerHTML = '<b class="warning">[이미 존재하는 아이디입니다.]</b>';
-        } else {
-            $idInput.style.borderColor = "green";
-            $idCheck.innerHTML = '<b class="success">[사용할 수 있는 아이디입니다.]</b>';
-        }
-    }
-});
-
-// 패스워드 검사
-const passwordPattern =
-    /([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9])/;
-
-// 이름 검사
+// 이름 패턴: 한글만 허용
 const namePattern = /^[가-힣]+$/;
 
-// 이메일 검사
+// 이메일 패턴: 기본적인 이메일 형식
 const emailPattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+
+// ============================== 회원가입 정보 데이터 유효성 검증 ==============================
+export const validateInput = {
+    // 아이디 유효성 검사 함수
+    account: async (value) => {
+        // 빈 값 검사
+        if (!value.trim()) return { valid: false, message: "아이디는 필수값입니다!" };
+
+        // 정규표현식 검사
+        if (!accountPattern.test(value))
+            return { valid: false, message: "아이디는 4~14글자의 영문,숫자로 입력하세요." };
+
+        // 중복 검사
+        const isAvailable = await checkAvailability("account", value);
+
+        // 중복 여부에 따라 결과 반환
+        return isAvailable
+            ? { valid: true }
+            : { valid: false, message: "아이디가 중복되었습니다." };
+    },
+
+    // 비밀번호 유효성 검사 함수
+    password: (value) => {
+        if (!value.trim()) return { valid: false, message: "비밀번호는 필수값입니다!" };
+
+        if (!passwordPattern.test(value))
+            return {
+                valid: false,
+                message: "비밀번호는 영문, 숫자, 특수문자를 포함하여 8자 이상이어야 합니다!",
+            };
+
+        return { valid: true };
+    },
+
+    // 비밀번호 확인 유효성 검사 함수
+    passwordCheck: (value, password) => {
+        if (!value.trim()) return { valid: false, message: "비밀번호 확인란은 필수값입니다!" };
+
+        if (value !== password) return { valid: false, message: "비밀번호가 일치하지 않습니다!" };
+
+        return { valid: true };
+    },
+
+    // 이름 유효성 검사 함수
+    name: (value) => {
+        if (!value.trim()) return { valid: false, message: "이름은 필수정보입니다!" };
+
+        if (!namePattern.test(value))
+            return { valid: false, message: "이름은 한글로 입력해주세요." };
+
+        return { valid: true };
+    },
+
+    // 이메일 유효성 검사 함수
+    email: async (value) => {
+        if (!value.trim()) return { valid: false, message: "이메일은 필수값입니다!" };
+
+        if (!emailPattern.test(value))
+            return { valid: false, message: "이메일 형식을 지켜주세요." };
+
+        const isAvailable = await checkAvailability("email", value);
+
+        return isAvailable
+            ? { valid: true }
+            : { valid: false, message: "이메일이 중복되었습니다." };
+    },
+};

@@ -218,6 +218,6 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             </div>
         </div>
 
-        <script src="/assets/js/validation.js"></script>
+        <script type="module" src="/assets/js/signUp.js"></script>
     </body>
 </html>
