@@ -1,6 +1,7 @@
 package com.study.springstudy.springmvc.chap05.service;
 
-import com.study.springstudy.springmvc.chap05.dto.SignUpRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.LoginRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
 import com.study.springstudy.springmvc.chap05.entity.Member;
 import com.study.springstudy.springmvc.chap05.mapper.MemberMapper;
 import lombok.RequiredArgsConstructor;
@@ -23,9 +24,9 @@ public class MemberService {
 
     // 로그인 요청
     // 아이디가 틀렸는지 비밀번호가 틀렸는지 알려주지 않을 때는 boolean으로 return 줘도 됨 -> 이걸 추천
-    public LoginResult authenticate(String account, String password) {
+    public LoginResult authenticate(LoginRequestDTO dto) {
 
-        Member findMember = memberMapper.findOne(account);
+        Member findMember = memberMapper.findOne(dto.getAccount());
 
         // 가입 여부 확인 (아이디 확인)
         if (findMember == null) {
@@ -35,7 +36,7 @@ public class MemberService {
         // 비밀번호 일치 검사
         // 둘 다 맞으면 성공
         // encoder.matches(): DB에서도 모름 -> 그래서 비밀번호 찾으면 새로운 비밀번호 입력하라고 하거나 임시 비밀번호를 알려주는거임
-        if (encoder.matches(password, findMember.getPassword())) {
+        if (encoder.matches(dto.getPassword(), findMember.getPassword())) {
             return SUCCESS;
         } else return NO_PW;
     }

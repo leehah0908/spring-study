@@ -1,4 +1,4 @@
-package com.study.springstudy.springmvc.chap05.dto;
+package com.study.springstudy.springmvc.chap05.dto.request;
 
 import com.study.springstudy.springmvc.chap05.entity.Member;
 import jakarta.validation.constraints.Email;

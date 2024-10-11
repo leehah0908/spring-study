@@ -1,6 +1,6 @@
 package com.study.springstudy.springmvc.chap05.service;
 
-import com.study.springstudy.springmvc.chap05.dto.SignUpRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
