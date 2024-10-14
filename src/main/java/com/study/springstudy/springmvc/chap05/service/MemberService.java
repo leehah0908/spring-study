@@ -53,7 +53,7 @@ public class MemberService {
         }
 
         // 자동 로그인 처리
-        if (dto.getAutoLogin()) {
+        if (dto.getAutoLogin() != null && dto.getAutoLogin()) {
             // 자동 로그인 쿠키 생성 -> 쿠키 내용은 중복되지 않는 값(브라우저의 세션 아이디)을 저장
             Cookie cookie = new Cookie("auto", session.getId());
 
@@ -96,6 +96,7 @@ public class MemberService {
                 .name(findMember.getName())
                 .email(findMember.getEmail())
                 .auth(findMember.getAuth().toString())
+                .profile(findMember.getProfileImage())
                 .build();
 
         // 세션에 로그인한 회원 정보 저장

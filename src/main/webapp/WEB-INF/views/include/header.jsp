@@ -11,7 +11,12 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         </h1>
         <!-- 프로필 사진 -->
         <div class="profile-box">
-            <img src="/assets/img/anonymous.jpg" alt="프사" />
+            <c:if test="${login.profile == null}">
+                <img src="/assets/img/anonymous.jpg" alt="프사" />
+            </c:if>
+            <c:if test="${login != null && login.profile != null}">
+                <img src="/display${login.profile}" alt="프사" />
+            </c:if>
         </div>
         <h2 class="intro-text">Welcome ${login == null ? '' : login.name}</h2>
         <a href="#" class="menu-open">
