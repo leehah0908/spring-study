@@ -294,7 +294,7 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                 if (replies !== null && replies.length > 0) {
                     for (let reply of replies) {
                         // 객체 디스트럭처링
-                        const { rno, writer, text, regDate } = reply;
+                        const { rno, writer, text, regDate, account } = reply;
 
                         tag += `
                             <div id='replyContent' class='card-body' data-replyId='\${rno}'>
@@ -307,9 +307,15 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                                 <br>
                                 <div class='row'>
                                     <div class='col-md-9'>\${text}</div>
-                                    <div class='col-md-3 text-right'>
-                                        <a id='replyModBtn' class='btn btn-sm btn-outline-dark' data-bs-toggle='modal' data-bs-target='#replyModifyModal'>수정</a>&nbsp;
-                                        <a id='replyDelBtn' class='btn btn-sm btn-outline-dark' href='#'>삭제</a>
+                                    <div class='col-md-3 text-right'>`;
+
+                        if (auth === "관리자" || currentAccount === account) {
+                            tag += `
+                                    <a id='replyModBtn' class='btn btn-sm btn-outline-dark' data-bs-toggle='modal' data-bs-target='#replyModifyModal'>수정</a>&nbsp;
+                                    <a id='replyDelBtn' class='btn btn-sm btn-outline-dark' href='#'>삭제</a>`;
+                        }
+
+                        tag += `
                                     </div>
                                 </div>
                             </div>
