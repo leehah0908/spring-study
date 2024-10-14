@@ -63,6 +63,7 @@ public class MemberService {
                 .account(findMember.getAccount())
                 .name(findMember.getName())
                 .email(findMember.getEmail())
+                .auth(findMember.getAuth().toString())
                 .build();
 
         // 세션에 로그인한 회원 정보 저장

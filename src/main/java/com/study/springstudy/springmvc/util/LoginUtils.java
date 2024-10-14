@@ -3,6 +3,8 @@ package com.study.springstudy.springmvc.util;
 import com.study.springstudy.springmvc.chap05.dto.response.LoginUserResponseDTO;
 import jakarta.servlet.http.HttpSession;
 
+import static com.study.springstudy.springmvc.chap05.entity.Auth.ADMIN;
+
 // 회원 인증, 인가와 관련된 상수와 메서드를 가진 클래스
 public class LoginUtils {
 
@@ -23,4 +25,13 @@ public class LoginUtils {
         return dto.getAccount();
     }
 
+    public static boolean isAdmin(HttpSession session) {
+        LoginUserResponseDTO dto = (LoginUserResponseDTO) session.getAttribute(LOGIN_KEY);
+
+        return dto.getAuth().equals(ADMIN.toString());
+    }
+
+    public static boolean isMine(HttpSession session, String targetAccount) {
+        return targetAccount.equals(getCurrentLoginMember(session));
+    }
 }
