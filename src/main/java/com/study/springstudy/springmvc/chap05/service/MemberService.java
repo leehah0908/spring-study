@@ -109,11 +109,19 @@ public class MemberService {
         Cookie c = WebUtils.getCookie(request, "auto");
 
         // 쿠키 삭제 -> 쿠키 수명 0으로 만들어서 클라이언트에 전송
-        c.setMaxAge(0);
-        c.setPath("/");
-        response.addCookie(c);
+        if (c != null) {
+            c.setMaxAge(0);
+            c.setPath("/");
+            response.addCookie(c);
+        }
 
         // DB 초기화
+        memberMapper.saveAutoLogin(
+                AutoLoginDTO.builder()
+                        .sessionId("none")
+                        .limitTime(LocalDateTime.now())
+                        .account(LoginUtils.getCurrentLoginMember(request.getSession()))
+                        .build());
 
     }
 }
