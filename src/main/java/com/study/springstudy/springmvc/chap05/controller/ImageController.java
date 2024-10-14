@@ -27,7 +27,7 @@ public class ImageController {
 
         File file = new File(uri);
         ResponseEntity<byte[]> result = null;
-        HttpHeaders headers = new HttpHeaders(); // 응답용 헤다 객체 설정
+        HttpHeaders headers = new HttpHeaders(); // 응답용 헤더 객체 설정
 
         try {
             // 매개값으로 전달받은 파일의 타입이 무엇인지 문자열로 변환
