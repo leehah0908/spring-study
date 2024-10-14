@@ -2321,3 +2321,27 @@
 [2024-10-14 15:40:53:8269] INFO  32568 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 [2024-10-14 15:40:53:8270] INFO  32568 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 [2024-10-14 15:41:00:15436] WARN  32568 --- [nio-8181-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[2024-10-14 15:50:43:287] INFO  32989 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 32989 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-14 15:50:43:288] DEBUG 32989 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-14 15:50:43:288] INFO  32989 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-14 15:50:44:1124] INFO  32989 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.05 seconds (process running for 1.204)
+[2024-10-14 15:50:51:7585] INFO  32989 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-14 15:50:51:7586] INFO  32989 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+[2024-10-14 16:30:27:289] INFO  34641 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 34641 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-14 16:30:27:289] DEBUG 34641 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-14 16:30:27:290] INFO  34641 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-14 16:30:28:1096] INFO  34641 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.023 seconds (process running for 1.153)
+[2024-10-14 16:30:35:8746] INFO  34641 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-14 16:30:35:8748] INFO  34641 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[2024-10-14 16:30:56:29717] DEBUG 34641 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where account = ?
+[2024-10-14 16:30:56:29727] DEBUG 34641 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: qwer(String)
+[2024-10-14 16:30:56:29737] DEBUG 34641 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-14 16:30:58:31151] DEBUG 34641 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where account = ?
+[2024-10-14 16:30:58:31152] DEBUG 34641 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: qwer1234(String)
+[2024-10-14 16:30:58:31157] DEBUG 34641 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-14 16:31:26:59156] DEBUG 34641 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where email = ?
+[2024-10-14 16:31:26:59158] DEBUG 34641 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: qwer@naver.com(String)
+[2024-10-14 16:31:26:59160] DEBUG 34641 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-14 16:31:40:73625] DEBUG 34641 --- [nio-8181-exec-9] c.s.s.s.c.mapper.MemberMapper.save       : ==>  Preparing: insert into tbl_member (account, password, name, email, profile_image) values(?, ?, ?, ?, ?)
+[2024-10-14 16:31:40:73627] DEBUG 34641 --- [nio-8181-exec-9] c.s.s.s.c.mapper.MemberMapper.save       : ==> Parameters: qwer1234(String), $2a$10$HyXjTl65tIJzt0cP9Or18OFDv0J8ZlWC2/oUY97wVLwpY7CD9Aso6(String), 깅김김(String), qwer@naver.com(String), /Users/leehah/Playdata_backend/upload/3250caf41639405bbacc1a8ecfea5dc0.jpg(String)
+[2024-10-14 16:31:40:73630] DEBUG 34641 --- [nio-8181-exec-9] c.s.s.s.c.mapper.MemberMapper.save       : <==    Updates: 1

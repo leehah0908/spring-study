@@ -28,8 +28,8 @@ public class MemberService {
     private final PasswordEncoder encoder;
 
     // 회원가입 처리 서비스
-    public boolean join(SignUpRequestDTO dto) {
-        return memberMapper.save(dto.toEntity(encoder));
+    public boolean join(SignUpRequestDTO dto, String savePath) {
+        return memberMapper.save(dto.toEntity(encoder, savePath));
     }
 
     // 로그인 요청

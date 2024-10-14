@@ -19,8 +19,8 @@
     <!-- 회원 가입 -->
     <insert id="save">
         insert into tbl_member
-        (account, password, name, email)
-        values(#{account}, #{password}, #{name}, #{email})
+        (account, password, name, email, profile_image)
+        values(#{account}, #{password}, #{name}, #{email}, #{profileImage})
     </insert>
 
     <!-- 회원 탈퇴 -->

@@ -6,6 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.multipart.MultipartFile;
 
 @Getter
 @Setter
@@ -28,12 +29,15 @@ public class SignUpRequestDTO {
     @Email // email 형식인지 검사 -> 모양만 검사하는거임
     private String email;
 
-    public Member toEntity (PasswordEncoder encoder) {
+    private MultipartFile profileImage;
+
+    public Member toEntity (PasswordEncoder encoder, String savePath) {
         return Member.builder()
                 .account(account)
                 .password(encoder.encode(password)) // 비밀번호는 암호화해서 넘기기
                 .email(email)
                 .name(name)
+                .profileImage(savePath)
                 .build();
     }
 
