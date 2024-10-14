@@ -158,43 +158,52 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                     <!-- 댓글 쓰기 영역 -->
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-9">
-                                    <div class="form-group">
-                                        <label for="newReplyText" hidden>댓글 내용</label>
-                                        <textarea
-                                            rows="3"
-                                            id="newReplyText"
-                                            name="replyText"
-                                            class="form-control"
-                                            placeholder="댓글을 입력해주세요."
-                                        ></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <div class="profile-box">
-                                            <img src="/assets/img/anonymous.jpg" alt="프사" />
+                            <c:if test="${login == null}">
+                                <a href="/members/sign-in"
+                                    >댓글은 로그인 후에 작성할 수 있습니다.</a
+                                >
+                            </c:if>
+                            <c:if test="${login != null}">
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <div class="form-group">
+                                            <label for="newReplyText" hidden>댓글 내용</label>
+                                            <textarea
+                                                rows="3"
+                                                id="newReplyText"
+                                                name="replyText"
+                                                class="form-control"
+                                                placeholder="댓글을 입력해주세요."
+                                            ></textarea>
                                         </div>
-                                        <label for="newReplyWriter" hidden>댓글 작성자</label>
-                                        <input
-                                            id="newReplyWriter"
-                                            name="replyWriter"
-                                            type="text"
-                                            class="form-control"
-                                            placeholder="작성자 이름"
-                                            style="margin-bottom: 6px"
-                                        />
-                                        <button
-                                            id="replyAddBtn"
-                                            type="button"
-                                            class="btn btn-dark form-control"
-                                        >
-                                            등록
-                                        </button>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <div class="profile-box">
+                                                <img src="/assets/img/anonymous.jpg" alt="프사" />
+                                            </div>
+                                            <label for="newReplyWriter" hidden>댓글 작성자</label>
+                                            <input
+                                                id="newReplyWriter"
+                                                name="replyWriter"
+                                                type="text"
+                                                class="form-control"
+                                                placeholder="작성자 이름"
+                                                style="margin-bottom: 6px"
+                                                value="${login.name}"
+                                                readonly
+                                            />
+                                            <button
+                                                id="replyAddBtn"
+                                                type="button"
+                                                class="btn btn-dark form-control"
+                                            >
+                                                등록
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </c:if>
                         </div>
                     </div>
                     <!-- end reply write -->
@@ -272,6 +281,8 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
             const url = "/api/v1/replies";
             const bno = "${b.boardNo}";
             const $addBtn = document.getElementById("replyAddBtn");
+            const currentAccount = "${login.account}";
+            const auth = "${login.auth}";
 
             // 화면에 댓글 태그들을 랜더링
             function renderReplies(replyData) {

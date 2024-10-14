@@ -24,7 +24,17 @@ public class Reply {
         constraint pk_reply primary key(reply_no),
         constraint fk_reply foreign key(board_no)
         references tbl_board(board_no) on delete cascade
+
     );
+
+    ALTER TABLE tbl_reply
+    ADD account VARCHAR(50);
+
+    ALTER TABLE tbl_reply
+    ADD CONSTRAINT fk_reply_account
+    FOREIGN KEY (account)
+    REFERENCES tbl_member (account)
+    ON DELETE CASCADE;
      */
 
     private int replyNo;
@@ -32,4 +42,6 @@ public class Reply {
     private String replyWriter;
     private LocalDateTime replyDate;
     private int boardNo;
+    private String account;
+
 }

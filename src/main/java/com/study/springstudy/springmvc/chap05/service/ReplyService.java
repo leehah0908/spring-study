@@ -7,11 +7,14 @@ import com.study.springstudy.springmvc.chap05.dto.response.ReplyListResponseDTO;
 import com.study.springstudy.springmvc.chap05.dto.response.ReplyUpdateDTO;
 import com.study.springstudy.springmvc.chap05.entity.Reply;
 import com.study.springstudy.springmvc.chap05.mapper.ReplyMapper;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.study.springstudy.springmvc.util.LoginUtils.getCurrentLoginMember;
 
 @Service
 @RequiredArgsConstructor
@@ -19,8 +22,11 @@ public class ReplyService {
 
     private final ReplyMapper mapper;
 
-    public void register(ReplyPostRequestDTO dto) {
-        mapper.save(dto.toEntity());
+    public void register(ReplyPostRequestDTO dto, HttpSession session) {
+        Reply reply = dto.toEntity();
+
+        reply.setAccount(getCurrentLoginMember(session));
+        mapper.save(reply);
     }
 
     public ReplyListResponseDTO getList(int boardNo, int pageNo) {

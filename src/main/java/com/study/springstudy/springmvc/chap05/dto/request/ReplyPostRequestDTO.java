@@ -37,5 +37,4 @@ public class ReplyPostRequestDTO {
                 .boardNo(bno)
                 .build();
     }
-
 }

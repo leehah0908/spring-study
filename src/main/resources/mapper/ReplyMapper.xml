@@ -23,8 +23,8 @@
     <!-- 댓글 등록 -->
     <insert id="save">
         insert into tbl_reply
-        (reply_text, reply_writer, board_no)
-        values(#{replyText}, #{replyWriter}, #{boardNo})
+        (reply_text, reply_writer, board_no, account)
+        values(#{replyText}, #{replyWriter}, #{boardNo}, #{account})
     </insert>
 
     <!-- 댓글 삭제 -->
