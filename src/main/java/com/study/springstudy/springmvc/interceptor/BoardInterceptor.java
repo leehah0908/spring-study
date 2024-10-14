@@ -36,7 +36,7 @@ public class BoardInterceptor implements HandlerInterceptor {
         // 삭제 요청이 들어왔을 떄 서버에서 작성자가 동일한지 확인
         // 현재 요청이 삭제 요청인지 확인
         String uri = request.getRequestURI();
-        if (uri.contains("delete")) {
+        if (uri.contains("delete") || uri.contains("modify")) {
             // 관리자?
             if (isAdmin(session)) return true;
 
