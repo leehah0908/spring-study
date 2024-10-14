@@ -56,7 +56,9 @@ public class MemberController {
                          RedirectAttributes ra,
                          HttpServletResponse response,
                          HttpServletRequest request) { // 모델에 담긴 데이터는 redirect시 전달이 안됨 -> RedirectAttributes를 사용해야 함
-        LoginResult result = service.authenticate(dto);
+        // 지동 로그인 기능을 추가하기 위해 세션과 응답 객체도 함께 전달
+        LoginResult result = service.authenticate(dto, request.getSession(), response);
+
         // 데이터를 일회성으로 전달할 때 사용하는 메서드
         ra.addFlashAttribute("result", result);
 

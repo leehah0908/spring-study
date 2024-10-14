@@ -33,4 +33,7 @@ public class Member {
     private Auth auth;
 
     private LocalDateTime regDate;
+
+    private String sessionId;
+    private LocalDateTime limitTime;
 }

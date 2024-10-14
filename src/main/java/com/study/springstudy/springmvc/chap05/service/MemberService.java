@@ -1,15 +1,20 @@
 package com.study.springstudy.springmvc.chap05.service;
 
+import com.study.springstudy.springmvc.chap05.dto.AutoLoginDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.LoginRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
 import com.study.springstudy.springmvc.chap05.dto.response.LoginUserResponseDTO;
 import com.study.springstudy.springmvc.chap05.entity.Member;
 import com.study.springstudy.springmvc.chap05.mapper.MemberMapper;
 import com.study.springstudy.springmvc.util.LoginUtils;
+import jakarta.servlet.http.Cookie;
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+
+import java.time.LocalDateTime;
 
 import static com.study.springstudy.springmvc.chap05.service.LoginResult.*;
 
@@ -27,7 +32,9 @@ public class MemberService {
 
     // 로그인 요청
     // 아이디가 틀렸는지 비밀번호가 틀렸는지 알려주지 않을 때는 boolean으로 return 줘도 됨 -> 이걸 추천
-    public LoginResult authenticate(LoginRequestDTO dto) {
+    public LoginResult authenticate(LoginRequestDTO dto,
+                                    HttpSession session,
+                                    HttpServletResponse response) {
 
         Member findMember = memberMapper.findOne(dto.getAccount());
 
@@ -39,9 +46,32 @@ public class MemberService {
         // 비밀번호 일치 검사
         // 둘 다 맞으면 성공
         // encoder.matches(): DB에서도 모름 -> 그래서 비밀번호 찾으면 새로운 비밀번호 입력하라고 하거나 임시 비밀번호를 알려주는거임
-        if (encoder.matches(dto.getPassword(), findMember.getPassword())) {
-            return SUCCESS;
-        } else return NO_PW;
+        if (!encoder.matches(dto.getPassword(), findMember.getPassword())) {
+            return NO_PW;
+        }
+
+        // 자동 로그인 처리
+        if (dto.getAutoLogin()) {
+            // 자동 로그인 쿠키 생성 -> 쿠키 내용은 중복되지 않는 값(브라우저의 세션 아이디)을 저장
+            Cookie cookie = new Cookie("auto", session.getId());
+
+            // 쿠키 설정
+            int limitTime = 60 * 60 * 24 * 7;
+            cookie.setPath("/");
+            cookie.setMaxAge(limitTime);
+
+            // 클라이언트에 쿠키 담아서 전송
+            response.addCookie(cookie);
+
+            // DB에 쿠키에 관련된 값들(랜덤 세션 아이디, 자동 로그인 만료시간)을 갱신
+            AutoLoginDTO autoDto = AutoLoginDTO.builder()
+                    .sessionId(session.getId())
+                    .limitTime(LocalDateTime.now().plusSeconds(limitTime))
+                    .account(dto.getAccount())
+                    .build();
+            memberMapper.saveAutoLogin(autoDto);
+        }
+        return SUCCESS;
     }
 
     public boolean checkIdentifier(String type, String keyword) {

@@ -43,7 +43,7 @@ class MemberServiceTest {
                 .build();
 
         // when
-        LoginResult result = memberService.authenticate(dto);
+        LoginResult result = memberService.authenticate(dto, request.getSession(), response);
         
         // then
         assertEquals(result, LoginResult.NO_ACC);
@@ -59,7 +59,7 @@ class MemberServiceTest {
                 .build();
 
         // when
-        LoginResult result = memberService.authenticate(dto);
+        LoginResult result = memberService.authenticate(dto, request.getSession(), response);
 
         // then
         assertEquals(result, LoginResult.NO_PW);
@@ -75,7 +75,7 @@ class MemberServiceTest {
                 .build();
 
         // when
-        LoginResult result = memberService.authenticate(dto);
+        LoginResult result = memberService.authenticate(dto, request.getSession(), response);
 
         // then
         assertEquals(result, LoginResult.SUCCESS);
