@@ -1,9 +1,6 @@
 package com.study.springstudy.springmvc.chap05.entity;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -11,6 +8,8 @@ import java.time.LocalDateTime;
 @ToString
 @EqualsAndHashCode
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Member {
     /*
     -- 회원 관리 테이블

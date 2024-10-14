@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.util.WebUtils;
 
 @Controller
 @RequiredArgsConstructor
@@ -76,7 +77,15 @@ public class MemberController {
     }
 
     @GetMapping("/sign-out")
-    public String signOut(HttpSession session) {
+    public String signOut(HttpSession session,
+                          HttpServletRequest request,
+                          HttpServletResponse response) {
+
+        // 자동 로그인 중인지 확인
+        if (WebUtils.getCookie(request, "auto") != null) {
+            // 쿠키 삭제 및 DB 데이터 초기화
+            service.autoLoginClear(request, response);
+        }
 
         // 세션에서 로그인 정보 기록 삭제
         session.removeAttribute("login");

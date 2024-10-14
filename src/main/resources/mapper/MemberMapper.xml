@@ -50,5 +50,11 @@
         where account = #{account}
     </update>
 
+    <select id="findByCookie" resultType="member">
+        select *
+        from tbl_member
+        where session_id = #{sessionId}
+    </select>
+
 
 </mapper>

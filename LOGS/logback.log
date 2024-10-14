@@ -1155,3 +1155,926 @@
 [2024-10-14 11:50:56:539976] DEBUG 26508 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
 [2024-10-14 11:50:56:539977] DEBUG 26508 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
 [2024-10-14 11:50:56:539981] DEBUG 26508 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:24:40:304] INFO  28076 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 28076 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-14 12:24:40:304] DEBUG 28076 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-14 12:24:40:304] INFO  28076 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-14 12:24:41:1143] INFO  28076 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.063 seconds (process running for 1.207)
+[2024-10-14 12:24:55:15692] INFO  28076 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-14 12:24:55:15693] INFO  28076 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-14 12:24:56:15866] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:24:56:15878] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:24:56:15890] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:24:56:15897] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:24:56:15898] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:24:56:15899] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:24:59:19715] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:24:59:19716] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:24:59:19720] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:24:59:19721] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:24:59:19722] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:24:59:19724] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:03:23227] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:03:23228] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:03:23232] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:03:23233] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:03:23233] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:03:23236] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:05:25142] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:05:25143] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:05:25147] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:05:25148] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:05:25148] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:05:25150] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:25982] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:25982] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:25985] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:25986] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:25987] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:25989] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:26032] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:25:06:26034] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:25:06:26041] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:25:06:26042] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:25:06:26042] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:25:06:26044] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:25:06:26197] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:26197] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:26198] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:26199] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:26199] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:26199] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:26201] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:26201] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:26202] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:26202] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:26203] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:26204] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:26204] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:26206] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:06:26207] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:26208] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:06:26208] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:06:26208] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41342] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41343] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41346] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41347] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41348] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41350] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41367] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41368] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41370] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41371] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41371] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41373] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41374] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:25:21:41374] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:25:21:41377] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:25:21:41378] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:25:21:41378] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:25:21:41379] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:25:21:41397] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41397] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41397] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41397] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41397] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41398] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41398] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41398] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41398] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41398] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41399] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41399] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41399] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41400] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41400] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41400] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41400] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41401] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41405] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41405] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:21:41406] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41406] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41407] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:21:41408] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:21:41408] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46045] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46045] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46047] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46047] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46047] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46050] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46060] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46060] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46062] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46062] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46063] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46064] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46065] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:25:26:46065] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:25:26:46069] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:25:26:46070] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:25:26:46070] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:25:26:46072] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:25:26:46098] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46098] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46098] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46098] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46098] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46099] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46099] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46099] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46100] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46101] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46101] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46103] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46107] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46107] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:26:46108] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46108] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46109] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:26:46110] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:26:46111] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66418] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66420] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66423] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66423] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66423] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66425] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66432] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-14 12:25:46:66433] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 102(Integer)
+[2024-10-14 12:25:46:66437] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-14 12:25:46:66437] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-14 12:25:46:66437] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 102(Integer)
+[2024-10-14 12:25:46:66439] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-14 12:25:46:66559] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66559] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66559] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66559] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66560] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66560] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66561] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66565] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66566] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66566] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66566] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66567] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66568] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66568] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66568] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66568] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66568] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66569] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66569] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66569] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:46:66569] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:46:66570] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:46:66570] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:46:66570] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:46:66571] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:46:66575] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-14 12:25:46:66575] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 102(Integer), 0(Integer), 5(Integer)
+[2024-10-14 12:25:46:66577] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 2
+[2024-10-14 12:25:46:66579] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-14 12:25:46:66579] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 102(Integer)
+[2024-10-14 12:25:46:66580] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-14 12:25:51:70935] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70935] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70938] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70939] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70939] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70941] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:70942] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:25:51:70942] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:25:51:70947] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:25:51:70948] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:25:51:70948] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:25:51:70950] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:25:51:70960] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70960] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70961] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70961] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70963] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70963] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70963] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70964] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70965] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:70967] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70967] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70968] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70968] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70969] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70969] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70969] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70969] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:70970] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:70973] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70973] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:70973] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70973] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:70975] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70975] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:70975] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70975] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:70976] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70976] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:70977] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:70977] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71760] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71760] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71763] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71763] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71764] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71766] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71768] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-14 12:25:51:71770] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-14 12:25:51:71773] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-14 12:25:51:71774] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-14 12:25:51:71774] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-14 12:25:51:71776] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-14 12:25:51:71795] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71796] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71796] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71796] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71798] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71798] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71799] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71799] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71799] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71799] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71801] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71801] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71808] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71808] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71809] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71809] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71810] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:51:71811] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:51:71811] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71811] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71812] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71814] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71815] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71815] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71815] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:51:71816] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:51:71816] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:51:71816] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71816] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71817] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:51:71818] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-14 12:25:51:71819] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-14 12:25:51:71821] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-14 12:25:51:71821] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-14 12:25:51:71821] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-14 12:25:51:71822] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-14 12:25:57:77488] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77489] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77491] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77492] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77492] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77493] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77506] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77507] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77509] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77510] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77510] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77511] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77512] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:25:57:77513] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:25:57:77517] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:25:57:77518] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:25:57:77518] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:25:57:77520] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:25:57:77545] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77545] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77545] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77545] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77546] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77546] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77547] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77547] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77547] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77547] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77548] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77547] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77548] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77548] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77548] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77549] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77549] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77549] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77553] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77553] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:25:57:77553] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77553] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 431EADD9F451BB7A179AACD492C1772A(String)
+[2024-10-14 12:25:57:77554] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77554] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:25:57:77554] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77554] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:25:57:77554] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77555] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:25:57:77555] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:25:57:77555] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:15:95846] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:15:95848] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:16:95850] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:16:95968] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:16:95969] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:16:95971] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:16:95971] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:16:95971] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:16:95971] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:16:95972] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:16:95972] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:16:95972] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:16:95973] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:16:95973] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:16:95973] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:22:102351] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:22:102351] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:22:102353] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:22:102378] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:22:102378] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:22:102378] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:22:102379] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:22:102379] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:22:102379] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:22:102379] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:22:102380] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:22:102380] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:22:102380] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:22:102380] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:22:102381] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:28:108191] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:28:108192] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:28:108194] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:28:108204] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:28:108205] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:28:108207] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:28:108308] WARN  28076 --- [nio-8181-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[2024-10-14 12:26:36:116171] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:36:116171] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:36:116172] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:36:116193] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:36:116195] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:36:116195] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:36:116195] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:36:116205] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:36:116205] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:36:116206] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:42:122265] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122267] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: A2B7B98640DE6FF4E1942C29B8EA4499(String)
+[2024-10-14 12:26:42:122269] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 0
+[2024-10-14 12:26:42:122271] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122271] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122274] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122371] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.saveAutoLogin              : ==>  Preparing: update tbl_member set session_id = ?, limit_time = ? where account = ?
+[2024-10-14 12:26:42:122372] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.saveAutoLogin              : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String), 2024-10-21T12:26:42.521094(LocalDateTime), abs12345(String)
+[2024-10-14 12:26:42:122376] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.saveAutoLogin              : <==    Updates: 1
+[2024-10-14 12:26:42:122376] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122376] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122377] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122382] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122382] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122384] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122384] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122384] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122384] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122385] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:26:42:122385] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:26:42:122386] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:26:42:122386] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:26:42:122386] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:26:42:122387] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:26:42:122413] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122413] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122413] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122413] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122414] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122414] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122415] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:26:42:122416] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:26:42:122417] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:26:42:122418] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:26:42:122418] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274748] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274753] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274758] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274759] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274759] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274762] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274774] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274774] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274776] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274777] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274778] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274779] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274785] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:29:14:274786] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:29:14:274796] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:29:14:274797] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:29:14:274797] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:29:14:274800] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:29:14:274839] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274840] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274842] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274841] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:14:274842] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274842] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274843] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:14:274844] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274844] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274844] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:14:274844] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278548] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278549] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278553] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278554] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278555] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278558] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278567] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278567] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278569] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278570] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278571] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278573] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278574] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:29:18:278575] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:29:18:278579] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:29:18:278580] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:29:18:278580] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:29:18:278581] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:29:18:278601] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278601] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:18:278603] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278602] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:18:278603] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278603] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278603] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278603] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:18:278604] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:18:278605] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278605] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278605] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278605] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:18:278605] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282940] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282940] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282942] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282943] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282943] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282944] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282952] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282952] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282954] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282955] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282955] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282956] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282957] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:29:23:282958] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:29:23:282961] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:29:23:282962] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:29:23:282962] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:29:23:282964] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:29:23:282984] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282984] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282984] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282984] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282985] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282986] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282985] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282986] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282986] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282986] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282987] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282987] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282987] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282987] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282987] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:23:282988] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:23:282988] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282988] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282989] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282989] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282989] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282990] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282989] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:23:282990] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282990] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:23:282991] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282991] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:23:282991] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282992] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:23:282992] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287172] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287173] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287176] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287177] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287177] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287179] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287188] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287188] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287189] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287190] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287190] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287190] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287192] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:29:27:287192] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:29:27:287194] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:29:27:287195] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:29:27:287195] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:29:27:287197] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287215] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287216] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287218] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287217] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:29:27:287219] DEBUG 28076 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:29:27:287220] DEBUG 28076 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331299] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331301] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331302] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331303] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331303] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331305] DEBUG 28076 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331312] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331313] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331315] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331316] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331316] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331318] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331319] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:30:11:331319] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:30:11:331323] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:30:11:331324] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:30:11:331324] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:30:11:331326] DEBUG 28076 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:30:11:331347] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331349] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331348] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331349] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:30:11:331349] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331351] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331350] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:30:11:331351] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:30:11:331351] DEBUG 28076 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331351] DEBUG 28076 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331351] DEBUG 28076 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331352] DEBUG 28076 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:30:11:331352] DEBUG 28076 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:04:279] INFO  28504 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 28504 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-14 12:38:04:279] DEBUG 28504 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-14 12:38:04:279] INFO  28504 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-14 12:38:04:1089] INFO  28504 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.014 seconds (process running for 1.149)
+[2024-10-14 12:38:08:5100] INFO  28504 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-14 12:38:08:5101] INFO  28504 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-14 12:38:09:5277] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5288] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5299] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5307] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5307] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5308] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:09:5321] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:38:09:5321] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:38:09:5326] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:38:09:5327] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:38:09:5327] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:38:09:5328] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:38:09:5729] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5730] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5731] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5731] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5732] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5733] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5733] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5732] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5734] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5734] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5734] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5735] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5735] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5734] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:09:5735] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5736] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:09:5736] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:09:5736] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5736] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5736] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5737] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:09:5738] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5738] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:09:5738] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:09:5738] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5739] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5738] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:09:5739] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:09:5740] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:09:5740] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8607] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8607] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8608] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8609] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8609] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8612] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8620] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8621] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8623] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8623] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8624] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8625] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8626] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:38:12:8627] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:38:12:8630] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:38:12:8631] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:38:12:8631] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:38:12:8632] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:38:12:8648] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8648] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8649] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 65AFC404D8706FD373DC56EA1420DB22(String)
+[2024-10-14 12:38:12:8650] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8650] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8650] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8650] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8651] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:38:12:8652] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8652] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8652] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8652] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:38:12:8653] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:39:56:112628] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:39:56:112629] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:39:56:112633] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:39:56:112634] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:39:56:112635] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:39:56:112636] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:39:58:114192] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:39:58:114193] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:39:58:114198] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:39:58:114199] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:39:58:114199] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:39:58:114201] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:39:59:116097] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:39:59:116098] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:39:59:116103] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:39:59:116105] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:39:59:116105] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:39:59:116107] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:40:33:150164] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:33:150165] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:34:150168] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:34:150272] WARN  28504 --- [nio-8181-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+[2024-10-14 12:40:46:163148] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:40:46:163149] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:40:46:163155] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:40:46:163156] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:40:46:163157] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:40:46:163159] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:40:58:174767] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174768] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174770] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174868] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.saveAutoLogin              : ==>  Preparing: update tbl_member set session_id = ?, limit_time = ? where account = ?
+[2024-10-14 12:40:58:174868] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.saveAutoLogin              : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String), 2024-10-21T12:40:58.699385(LocalDateTime), abs12345(String)
+[2024-10-14 12:40:58:174873] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.saveAutoLogin              : <==    Updates: 1
+[2024-10-14 12:40:58:174874] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174874] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174874] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174881] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174881] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174882] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174882] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174883] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174883] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174883] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:40:58:174884] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:40:58:174885] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:40:58:174886] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:40:58:174886] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:40:58:174886] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:40:58:174904] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174905] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174906] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174906] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174907] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174908] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174909] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:40:58:174909] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:40:58:174909] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:40:58:174909] DEBUG 28504 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174909] DEBUG 28504 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:40:58:174910] DEBUG 28504 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196436] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196436] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196438] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196439] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196439] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196440] DEBUG 28504 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196448] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196448] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196450] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196451] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196452] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196453] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196453] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-14 12:41:20:196454] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-14 12:41:20:196457] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-14 12:41:20:196458] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-14 12:41:20:196458] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-14 12:41:20:196460] DEBUG 28504 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-14 12:41:20:196480] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196480] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196481] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==>  Preparing: select * from tbl_member where session_id = ?
+[2024-10-14 12:41:20:196482] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196482] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : ==> Parameters: 7D550AED9BD43F34599ECE73EFF95C5A(String)
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.M.findByCookie               : <==      Total: 1
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196483] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-14 12:41:20:196484] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: abs12345(String)
+[2024-10-14 12:41:20:196484] DEBUG 28504 --- [nio-8181-exec-1] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196485] DEBUG 28504 --- [nio-8181-exec-5] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196484] DEBUG 28504 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196485] DEBUG 28504 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-14 12:41:20:196488] DEBUG 28504 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
