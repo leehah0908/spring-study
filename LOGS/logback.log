@@ -949,3 +949,63 @@
 [2024-10-15 16:24:32:40288] INFO  55823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 [2024-10-15 16:24:32:40289] INFO  55823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
 [2024-10-15 16:24:41:48784] INFO  55823 --- [nio-8181-exec-7] c.s.s.s.c.service.KakaoLoginService      : 응답 JSON 데이터: {access_token=5fKVUfdivfIrCwRigerbmrL8-wzOTIsGAAAAAQo9c5oAAAGSjxCTYyrd4XW-Oo9G, token_type=bearer, refresh_token=aUyV_fS93xuWNgUYx6z3voPECWtRTCUaAAAAAgo9c5oAAAGSjxCTXyrd4XW-Oo9G, expires_in=21599, scope=account_email profile_image profile_nickname, refresh_token_expires_in=5183999}
+[2024-10-15 17:31:21:295] INFO  57744 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 57744 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 17:31:21:295] DEBUG 57744 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 17:31:21:296] INFO  57744 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 17:31:22:1158] INFO  57744 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.079 seconds (process running for 1.22)
+[2024-10-15 17:31:30:9818] INFO  57744 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 17:31:30:9819] INFO  57744 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 17:31:32:11618] INFO  57744 --- [nio-8181-exec-7] c.s.s.s.c.service.KakaoLoginService      : 응답 JSON 데이터: {access_token=TG1f-wliWj_HVkHmGIFqf-5EyHxh61TbAAAAAQoqJQ4AAAGSj03JEird4XW-Oo9G, token_type=bearer, refresh_token=iROH7VYw4TjQEx-O0KHtmwJsXqaFMR5MAAAAAgoqJQ4AAAGSj03JDyrd4XW-Oo9G, expires_in=21599, scope=account_email profile_image profile_nickname, refresh_token_expires_in=5183999}
+[2024-10-15 17:31:32:11793] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where email = ?
+[2024-10-15 17:31:32:11803] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: leehah0908@naver.com(String)
+[2024-10-15 17:31:32:11813] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-15 17:31:32:11884] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.mapper.MemberMapper.save       : ==>  Preparing: insert into tbl_member (account, password, name, email, profile_image) values(?, ?, ?, ?, ?)
+[2024-10-15 17:31:32:11886] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.mapper.MemberMapper.save       : ==> Parameters: 3750951075(String), $2a$10$zCq/l8AYDQ/kcC1EFHipaOArUcf0a/w5Sng5B3eB3d5r1ehd88XYa(String), 이한희(String), leehah0908@naver.com(String), http://k.kakaocdn.net/dn/bz502m/btsyTH0POTO/qIyQeqJPkvoHf2TGvfpdR1/img_640x640.jpg(String)
+[2024-10-15 17:31:32:11897] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.mapper.MemberMapper.save       : <==    Updates: 1
+[2024-10-15 17:31:32:11897] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 17:31:32:11897] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: 3750951075(String)
+[2024-10-15 17:31:32:11900] DEBUG 57744 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 17:32:00:40095] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 17:32:00:40099] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 17:32:01:40113] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 17:32:01:40115] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 17:32:01:40116] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 17:32:01:40118] DEBUG 57744 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 17:34:16:277] INFO  57823 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 57823 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 17:34:16:277] DEBUG 57823 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 17:34:16:278] INFO  57823 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 17:34:17:1105] INFO  57823 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.033 seconds (process running for 1.161)
+[2024-10-15 17:34:21:4929] INFO  57823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 17:34:21:4931] INFO  57823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 17:34:21:5118] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 17:34:21:5128] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 17:34:21:5138] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 17:34:21:5141] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 17:34:21:5141] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 17:34:21:5143] DEBUG 57823 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 17:34:27:11324] INFO  57823 --- [nio-8181-exec-6] c.s.s.s.c.service.KakaoLoginService      : 응답 JSON 데이터: {access_token=HsZWXKq6Ar8O92yptNC2X-untkNJgEbaAAAAAQo8JCEAAAGSj1B04ird4XW-Oo9G, token_type=bearer, refresh_token=9JGn-7mn-_I5NW_Mj1UE2UOqjSfcb8bGAAAAAgo8JCEAAAGSj1B04Crd4XW-Oo9G, expires_in=21599, scope=account_email profile_image profile_nickname, refresh_token_expires_in=5183999}
+[2024-10-15 17:34:27:11390] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where email = ?
+[2024-10-15 17:34:27:11391] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: leehah0908@naver.com(String)
+[2024-10-15 17:34:27:11392] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-15 17:34:27:11397] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 17:34:27:11398] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 17:34:27:11400] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 17:34:27:11400] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 17:34:27:11400] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 17:34:27:11401] DEBUG 57823 --- [nio-8181-exec-4] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 17:34:49:33585] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 17:34:49:33587] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 17:34:49:33596] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 17:34:49:33598] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 17:34:49:33598] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 17:34:49:33601] DEBUG 57823 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 17:34:53:37257] INFO  57823 --- [nio-8181-exec-6] c.s.s.s.c.service.KakaoLoginService      : 응답 JSON 데이터: {access_token=-zLt0g81WDPhF2Yo1StLnx4fvchazYFBAAAAAQo9cpcAAAGSj1DaNSrd4XW-Oo9G, token_type=bearer, refresh_token=kJuV66u-ZM0iiJVLqouMse-qT9ixw2YyAAAAAgo9cpcAAAGSj1DaMSrd4XW-Oo9G, expires_in=21599, scope=account_email profile_image profile_nickname, refresh_token_expires_in=5183999}
+[2024-10-15 17:34:53:37307] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : ==>  Preparing: select count(*) from tbl_member where email = ?
+[2024-10-15 17:34:53:37308] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : ==> Parameters: leehah0908@naver.com(String)
+[2024-10-15 17:34:53:37310] DEBUG 57823 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.existsById      : <==      Total: 1
+[2024-10-15 17:34:53:37318] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 17:34:53:37319] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 17:34:53:37326] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 17:34:53:37327] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 17:34:53:37328] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 17:34:53:37330] DEBUG 57823 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1

@@ -37,4 +37,10 @@ public class Member {
     private LocalDateTime limitTime;
 
     private String profileImage;
+
+    private LoginMethod loginMethod;
+
+    public enum LoginMethod {
+        COMMON, KAKAO, GOOGLE, NAVER
+    }
 }

@@ -1,5 +1,9 @@
 package com.study.springstudy.springmvc.chap05.service;
 
+import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
+import com.study.springstudy.springmvc.chap05.dto.response.KakaoUserResponseDTO;
+import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -11,18 +15,39 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.Map;
+import java.util.UUID;
 
 @Service
 @Slf4j
+@RequiredArgsConstructor
 public class KakaoLoginService {
 
+    private final MemberService memberService;
 
-    public void login(Map<String, String> params) {
+    public void login(Map<String, String> params, HttpSession session) {
 
+        // 토큰 발급 요청
         String AccessToken = getKakaoAccessToken(params);
+
+        // 발급받은 액세스 토큰으로 사용자 정보 가져오기
+        KakaoUserResponseDTO kakaoUserInfo = getKakaoUserInfo(AccessToken);
+
+        // 카카오 정보로 서비스 회원가입 시키기
+        if (!memberService.checkIdentifier("email", kakaoUserInfo.getAccount().getEmail())) {
+
+            // 기존에 가입한적 없는 회원이면 회원가입
+            memberService.join(SignUpRequestDTO.builder()
+                    .account(String.valueOf(kakaoUserInfo.getId()))
+                    .password(UUID.randomUUID().toString())
+                    .name(kakaoUserInfo.getProperties().getNickname())
+                    .email(kakaoUserInfo.getAccount().getEmail())
+                    .build(), kakaoUserInfo.getProperties().getProfileImage());
+
+            // 로그인 처리
+            memberService.maintainLoginStatus(session, String.valueOf(kakaoUserInfo.getId()));
+        }
     }
 
-    // 토큰 발급 요청
     private String getKakaoAccessToken(Map<String, String> requestParam) {
 
         // 요청 URI
@@ -61,5 +86,25 @@ public class KakaoLoginService {
         log.info("응답 JSON 데이터: {}", responseJSON);
 
         return (String) responseJSON.get("access_token");
+    }
+
+    private KakaoUserResponseDTO getKakaoUserInfo(String accessToken) {
+
+        String requestURI = "https://kapi.kakao.com/v2/user/me";
+
+        // 요청 헤더
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Authorization", "Bearer " + accessToken);
+        headers.add("Content-type", "application/x-www-form-urlencoded;charset=utf-8");
+
+        // 요청 보내기
+        RestTemplate template = new RestTemplate();
+        ResponseEntity<KakaoUserResponseDTO> responseEntity =
+                template.exchange(requestURI, HttpMethod.POST, new HttpEntity<>(headers), KakaoUserResponseDTO.class);
+
+        KakaoUserResponseDTO userInfo = responseEntity.getBody();
+
+        return userInfo;
+
     }
 }
