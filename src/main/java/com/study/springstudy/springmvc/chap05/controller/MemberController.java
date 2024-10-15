@@ -5,21 +5,19 @@ import com.study.springstudy.springmvc.chap05.dto.request.SignUpRequestDTO;
 import com.study.springstudy.springmvc.chap05.service.LoginResult;
 import com.study.springstudy.springmvc.chap05.service.MemberService;
 import com.study.springstudy.springmvc.util.FileUtils;
+import com.study.springstudy.springmvc.util.MailSenderService;
+import jakarta.mail.MessagingException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.util.WebUtils;
 
@@ -32,8 +30,8 @@ public class MemberController {
     @Value("${file.upload.root-path}")
     private String rootPath;
 
-    @Autowired
     private final MemberService service;
+    private final MailSenderService mailSenderService;
 
     @GetMapping("/check")
     public ResponseEntity<?> check(@RequestParam String type,
@@ -116,5 +114,23 @@ public class MemberController {
 
         // 쿠키를 응답 객체에 쿠키를 포함해서 클라이언트로 전송
         response.addCookie(cookie);
+    }
+
+    @GetMapping("/email")
+    public String emailForm(){
+        return "email/email-form";
+    }
+
+    @PostMapping("/email")
+    @ResponseBody
+    public ResponseEntity<?> mailCheck(@RequestBody String email) {
+
+        try {
+            String checkNum = mailSenderService.joinMail(email);
+            System.out.println(checkNum);
+            return ResponseEntity.ok().body(checkNum);
+        } catch (MessagingException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 }
