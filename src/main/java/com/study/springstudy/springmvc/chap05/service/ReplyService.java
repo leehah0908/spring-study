@@ -35,6 +35,7 @@ public class ReplyService {
         page.setPageNo(pageNo);
 
         List<Reply> allList = mapper.findAll(boardNo, page);
+        System.out.println(allList.get(0));
         List<ReplyDetailResponseDTO> dtoList = new ArrayList<>();
 
         allList.forEach(reply -> dtoList.add(new ReplyDetailResponseDTO(reply)));

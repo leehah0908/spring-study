@@ -121,3 +121,553 @@
 [2024-10-15 09:38:31:67843] DEBUG 46079 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
 [2024-10-15 09:38:31:67843] DEBUG 46079 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
 [2024-10-15 09:38:31:67845] DEBUG 46079 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 09:43:28:281] INFO  46364 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 46364 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 09:43:28:282] DEBUG 46364 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 09:43:28:282] INFO  46364 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 09:43:29:1133] INFO  46364 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.06 seconds (process running for 1.217)
+[2024-10-15 09:43:33:5674] INFO  46364 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 09:43:33:5675] INFO  46364 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 09:43:34:5861] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 09:43:34:5873] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 09:43:34:5887] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 09:43:34:5890] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 09:43:34:5890] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 09:43:34:5891] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 09:43:36:8051] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:43:36:8052] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:43:36:8059] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:43:36:8059] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:43:36:8060] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:43:36:8065] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:43:51:23201] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:43:51:23205] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:43:51:23211] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:43:51:23303] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:43:51:23303] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:43:51:23304] DEBUG 46364 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:43:51:23312] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 09:43:51:23313] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 09:43:51:23315] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 09:43:51:23315] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 09:43:51:23315] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 09:43:51:23316] DEBUG 46364 --- [nio-8181-exec-8] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 09:43:52:24143] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:43:52:24143] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:43:52:24148] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:43:52:24149] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:43:52:24150] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:43:52:24152] DEBUG 46364 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:43:52:24219] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:43:52:24219] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 09:43:52:24226] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:43:52:24227] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:43:52:24227] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:43:52:24229] DEBUG 46364 --- [nio-8181-exec-4] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 09:44:32:64107] DEBUG 46364 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.save        : ==>  Preparing: insert into tbl_reply (reply_text, reply_writer, board_no, account) values(?, ?, ?, ?)
+[2024-10-15 09:44:32:64108] DEBUG 46364 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.save        : ==> Parameters: 댓글 이미지테스트(String), 이미지테스트(String), 100(Integer), imgtest(String)
+[2024-10-15 09:44:32:64111] DEBUG 46364 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.save        : <==    Updates: 1
+[2024-10-15 09:44:34:65737] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:44:34:65738] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 09:44:34:65741] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:44:34:65743] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:44:34:65743] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:44:34:65745] DEBUG 46364 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 09:53:59:280] INFO  46743 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 46743 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 09:53:59:280] DEBUG 46743 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 09:53:59:281] INFO  46743 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 09:54:00:1079] INFO  46743 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.002 seconds (process running for 1.133)
+[2024-10-15 09:54:04:4733] INFO  46743 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 09:54:04:4734] INFO  46743 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 09:54:04:4915] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:54:04:4930] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:04:4933] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:54:04:4934] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:54:04:4934] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:04:4944] DEBUG 46743 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:54:14:15312] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:54:14:15315] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:54:14:15321] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:54:14:15420] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:54:14:15421] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:54:14:15422] DEBUG 46743 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:54:14:15437] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 09:54:14:15438] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 09:54:14:15444] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 09:54:14:15445] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 09:54:14:15445] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 09:54:14:15446] DEBUG 46743 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 09:54:15:16276] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:54:15:16277] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:15:16282] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:54:15:16283] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:54:15:16283] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:15:16285] DEBUG 46743 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:54:15:16347] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:54:15:16347] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 09:54:15:16351] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:54:15:16353] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:54:15:16353] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:15:16355] DEBUG 46743 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 09:54:17:18640] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:54:17:18641] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 5(Integer), 5(Integer)
+[2024-10-15 09:54:17:18644] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:54:17:18645] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:54:17:18645] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:17:18646] DEBUG 46743 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 09:54:20:21112] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:54:20:21113] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 09:54:20:21116] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:54:20:21117] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:54:20:21117] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:54:20:21119] DEBUG 46743 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 09:56:25:277] INFO  46796 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 46796 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 09:56:25:277] DEBUG 46796 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 09:56:25:277] INFO  46796 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 09:56:25:1080] INFO  46796 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.006 seconds (process running for 1.135)
+[2024-10-15 09:56:29:4736] INFO  46796 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 09:56:29:4737] INFO  46796 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 09:56:29:4943] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:56:29:4954] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:56:29:4957] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:56:29:4958] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:56:29:4958] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:56:29:4968] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:56:39:14237] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:56:39:14240] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:56:39:14248] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:56:39:14337] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 09:56:39:14338] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 09:56:39:14339] DEBUG 46796 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 09:56:39:14354] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 09:56:39:14354] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 09:56:39:14359] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 09:56:39:14360] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 09:56:39:14360] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 09:56:39:14361] DEBUG 46796 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 09:56:39:15102] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 09:56:39:15104] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 09:56:39:15107] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 09:56:39:15108] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 09:56:39:15108] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 09:56:39:15111] DEBUG 46796 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 09:56:39:15172] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select * from tbl_reply where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 09:56:39:15175] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 09:56:39:15178] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 09:56:40:15181] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 09:56:40:15181] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 09:56:40:15183] DEBUG 46796 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:01:52:289] INFO  46971 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 46971 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:01:52:290] DEBUG 46971 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:01:52:290] INFO  46971 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:01:53:1120] INFO  46971 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.048 seconds (process running for 1.179)
+[2024-10-15 10:01:57:5110] INFO  46971 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:01:57:5112] INFO  46971 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[2024-10-15 10:01:57:5334] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:01:57:5344] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:01:57:5357] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:01:57:5360] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:01:57:5360] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:01:57:5363] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:02:09:17517] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:02:09:17520] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:02:09:17528] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:02:09:17621] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:02:09:17621] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:02:09:17622] DEBUG 46971 --- [nio-8181-exec-8] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:02:09:17631] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:02:09:17632] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:02:09:17634] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:02:09:17634] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:02:09:17634] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:02:09:17636] DEBUG 46971 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:02:10:18333] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:02:10:18334] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:02:10:18339] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:02:10:18340] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:02:10:18340] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:02:10:18344] DEBUG 46971 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:02:10:18464] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image FROM tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:02:10:18465] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:02:10:18469] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:02:10:18475] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:02:10:18475] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:02:10:18476] DEBUG 46971 --- [nio-8181-exec-3] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:07:00:286] INFO  47105 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47105 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:07:00:286] DEBUG 47105 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:07:00:286] INFO  47105 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:07:01:1090] INFO  47105 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.015 seconds (process running for 1.151)
+[2024-10-15 10:07:06:6265] INFO  47105 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:07:06:6266] INFO  47105 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:07:07:6454] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:07:07:6464] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:07:07:6467] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:07:07:6468] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:07:07:6468] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:07:07:6477] DEBUG 47105 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:07:13:13271] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:07:13:13274] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:07:13:13281] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:07:14:13373] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:07:14:13374] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:07:14:13375] DEBUG 47105 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:07:14:13390] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:07:14:13390] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:07:14:13394] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:07:14:13395] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:07:14:13395] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:07:14:13396] DEBUG 47105 --- [nio-8181-exec-7] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:07:15:14324] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:07:15:14325] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:07:15:14329] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:07:15:14330] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:07:15:14331] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:07:15:14333] DEBUG 47105 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:07:15:14369] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:07:15:14372] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:07:15:14375] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:07:15:14381] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:07:15:14382] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:07:15:14383] DEBUG 47105 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:21:23:304] INFO  47420 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47420 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:21:23:304] DEBUG 47420 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:21:23:304] INFO  47420 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:21:23:1129] INFO  47420 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.049 seconds (process running for 1.198)
+[2024-10-15 10:21:28:5918] INFO  47420 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:21:28:5920] INFO  47420 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+[2024-10-15 10:21:28:6108] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:21:28:6119] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:21:28:6123] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:21:28:6124] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:21:28:6124] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:21:28:6134] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:21:36:13433] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:21:36:13435] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:21:36:13443] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:21:36:13543] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:21:36:13543] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:21:36:13544] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:21:36:13558] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:21:36:13559] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:21:36:13564] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:21:36:13565] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:21:36:13565] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:21:36:13566] DEBUG 47420 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:21:37:14406] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:21:37:14407] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:21:37:14410] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:21:37:14411] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:21:37:14412] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:21:37:14414] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:21:37:14462] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:21:37:14462] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:21:37:14465] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:21:37:14469] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:21:37:14469] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:21:37:14471] DEBUG 47420 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:21:47:25077] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:21:47:25078] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:21:47:25085] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:21:47:25087] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:21:47:25087] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:21:47:25089] DEBUG 47420 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:21:49:26589] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:21:49:26590] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 97(Integer)
+[2024-10-15 10:21:49:26594] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:21:49:26595] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:21:49:26595] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 97(Integer)
+[2024-10-15 10:21:49:26599] DEBUG 47420 --- [nio-8181-exec-3] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:21:49:26643] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:21:49:26643] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 97(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:21:49:26646] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:21:49:26646] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:21:49:26646] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 97(Integer)
+[2024-10-15 10:21:49:26648] DEBUG 47420 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:21:52:29837] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:21:52:29839] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:21:52:29847] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:21:52:29848] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:21:52:29848] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:21:52:29850] DEBUG 47420 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:22:29:66915] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:22:29:66916] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:22:29:66919] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:22:29:66920] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:22:29:66921] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:22:29:66923] DEBUG 47420 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:22:29:66963] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:22:29:66964] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:22:29:66968] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:22:29:66969] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:22:29:66970] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:22:29:66971] DEBUG 47420 --- [nio-8181-exec-1] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:23:37:287] INFO  47486 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47486 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:23:37:287] DEBUG 47486 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:23:37:288] INFO  47486 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:23:38:1104] INFO  47486 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.028 seconds (process running for 1.164)
+[2024-10-15 10:23:42:5247] INFO  47486 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:23:42:5249] INFO  47486 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:23:42:5435] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:23:42:5447] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:23:42:5450] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:23:42:5451] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:23:42:5451] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:23:42:5461] DEBUG 47486 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:23:49:12762] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:23:49:12765] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:23:49:12771] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:23:50:12863] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:23:50:12864] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:23:50:12865] DEBUG 47486 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:23:50:12881] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:23:50:12881] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:23:50:12885] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:23:50:12887] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:23:50:12887] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:23:50:12888] DEBUG 47486 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:23:50:13592] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:23:50:13593] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 102(Integer)
+[2024-10-15 10:23:50:13597] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:23:50:13598] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:23:50:13598] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 102(Integer)
+[2024-10-15 10:23:50:13601] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:23:50:13653] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:23:50:13653] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 102(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:23:50:13657] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 2
+[2024-10-15 10:23:50:13660] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:23:50:13661] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 102(Integer)
+[2024-10-15 10:23:50:13662] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:23:53:15866] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:23:53:15867] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:23:53:15873] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:23:53:15874] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:23:53:15874] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:23:53:15876] DEBUG 47486 --- [nio-8181-exec-5] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:23:53:16770] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:23:53:16772] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:23:53:16775] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:23:53:16776] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:23:53:16776] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:23:53:16778] DEBUG 47486 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:23:54:16831] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:23:54:16833] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:23:54:16836] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:23:54:16837] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:23:54:16838] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:23:54:16839] DEBUG 47486 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:24:31:302] INFO  47517 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47517 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:24:31:302] DEBUG 47517 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:24:31:303] INFO  47517 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:24:32:1122] INFO  47517 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.025 seconds (process running for 1.184)
+[2024-10-15 10:24:36:5079] INFO  47517 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:24:36:5080] INFO  47517 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:24:36:5257] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:24:36:5268] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:24:36:5271] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:24:36:5272] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:24:36:5272] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:24:36:5281] DEBUG 47517 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:24:47:15753] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:24:47:15755] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:24:47:15762] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:24:47:15864] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:24:47:15864] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:24:47:15865] DEBUG 47517 --- [nio-8181-exec-6] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:24:47:15882] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:24:47:15882] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:24:47:15888] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:24:47:15890] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:24:47:15890] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:24:47:15891] DEBUG 47517 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:24:48:16744] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:24:48:16745] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:24:48:16750] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:24:48:16751] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:24:48:16752] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:24:48:16753] DEBUG 47517 --- [nio-8181-exec-8] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:24:48:16808] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:24:48:16808] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:24:48:16813] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:24:48:16818] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:24:48:16819] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:24:48:16820] DEBUG 47517 --- [nio-8181-exec-2] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:25:06:372] INFO  47539 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47539 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:25:06:373] DEBUG 47539 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:25:06:373] INFO  47539 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:25:07:1195] INFO  47539 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.113 seconds (process running for 1.273)
+[2024-10-15 10:25:20:291] INFO  47556 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47556 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:25:20:291] DEBUG 47556 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:25:20:292] INFO  47556 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:25:21:1099] INFO  47556 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.022 seconds (process running for 1.158)
+[2024-10-15 10:25:24:4935] INFO  47556 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:25:24:4937] INFO  47556 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:25:25:5150] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:25:25:5160] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:25:25:5173] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:25:25:5176] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:25:25:5176] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:25:25:5177] DEBUG 47556 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:25:33:13178] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:25:33:13181] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:25:33:13193] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:25:33:13280] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:25:33:13280] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:25:33:13282] DEBUG 47556 --- [nio-8181-exec-9] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:25:33:13292] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:25:33:13292] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:25:33:13294] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:25:33:13294] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:25:33:13294] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:25:33:13295] DEBUG 47556 --- [io-8181-exec-10] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:25:33:14019] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:25:33:14020] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:25:33:14023] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:25:33:14025] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:25:33:14025] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:25:33:14029] DEBUG 47556 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:26:00:285] INFO  47578 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47578 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:26:00:285] DEBUG 47578 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:26:00:286] INFO  47578 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:26:01:1100] INFO  47578 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.028 seconds (process running for 1.158)
+[2024-10-15 10:26:05:4669] INFO  47578 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:26:05:4671] INFO  47578 --- [nio-8181-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:26:05:4852] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:26:05:4862] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:26:05:4873] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:26:05:4876] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:26:05:4876] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:26:05:4877] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:26:10:9891] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:26:10:9894] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:26:10:9906] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:26:10:9998] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:26:10:9998] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest(String)
+[2024-10-15 10:26:10:9999] DEBUG 47578 --- [nio-8181-exec-4] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:26:10:10009] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:26:10:10009] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:26:10:10012] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:26:10:10012] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:26:10:10012] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:26:10:10013] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:26:11:10773] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:26:11:10773] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:11:10777] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:26:11:10778] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:26:11:10779] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:11:10783] DEBUG 47578 --- [nio-8181-exec-7] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:26:11:10908] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:26:11:10909] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:26:11:10914] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:26:11:10919] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:26:11:10919] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:11:10921] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:26:42:42211] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:26:42:42212] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:26:42:42217] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:26:42:42218] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:26:42:42218] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:26:42:42220] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:26:52:51574] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:26:52:51575] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:26:52:51578] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:26:52:51673] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:26:52:51674] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:26:52:51675] DEBUG 47578 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:26:52:51681] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:26:52:51682] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:26:52:51684] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:26:52:51684] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:26:52:51684] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:26:52:51685] DEBUG 47578 --- [nio-8181-exec-9] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:26:52:52500] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:26:52:52502] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:52:52507] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:26:52:52507] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:26:52:52507] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:52:52509] DEBUG 47578 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:26:52:52539] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:26:52:52540] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:26:52:52543] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:26:52:52544] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:26:52:52544] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:26:52:52546] DEBUG 47578 --- [nio-8181-exec-8] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:28:02:287] INFO  47649 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47649 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:28:02:287] DEBUG 47649 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:28:02:287] INFO  47649 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:28:03:1103] INFO  47649 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.03 seconds (process running for 1.168)
+[2024-10-15 10:28:07:5365] INFO  47649 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:28:07:5367] INFO  47649 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 10:28:07:5565] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:28:07:5577] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:28:07:5579] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:28:07:5580] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:28:07:5581] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:28:07:5591] DEBUG 47649 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:28:20:18716] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:28:20:18719] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:28:20:18727] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:28:20:18816] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:28:20:18817] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:28:20:18818] DEBUG 47649 --- [nio-8181-exec-2] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:28:20:18832] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:28:20:18833] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:28:20:18838] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:28:20:18838] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:28:20:18838] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:28:20:18839] DEBUG 47649 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:28:21:19559] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:28:21:19560] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:28:21:19564] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:28:21:19564] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:28:21:19565] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:28:21:19567] DEBUG 47649 --- [nio-8181-exec-5] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:28:21:19601] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:28:21:19602] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:28:21:19605] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:28:21:19608] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:28:21:19609] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:28:21:19610] DEBUG 47649 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:30:04:280] INFO  47703 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 47703 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 10:30:04:280] DEBUG 47703 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 10:30:04:280] INFO  47703 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 10:30:05:1116] INFO  47703 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.038 seconds (process running for 1.194)
+[2024-10-15 10:30:11:7160] INFO  47703 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 10:30:11:7163] INFO  47703 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+[2024-10-15 10:30:11:7415] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:30:11:7429] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:11:7432] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:30:11:7433] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:30:11:7434] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:11:7445] DEBUG 47703 --- [nio-8181-exec-1] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:30:18:14219] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:30:18:14221] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:30:18:14229] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:30:18:14319] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==>  Preparing: select * from tbl_member where account = ?
+[2024-10-15 10:30:18:14319] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : ==> Parameters: imgtest11(String)
+[2024-10-15 10:30:18:14321] DEBUG 47703 --- [nio-8181-exec-3] c.s.s.s.c.m.MemberMapper.findOne         : <==      Total: 1
+[2024-10-15 10:30:18:14336] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==>  Preparing: select b.board_no, b.title, b.content, b.writer, b.reg_date, b.view_count, count(r.reply_no) as reply_count from tbl_board B left join tbl_reply R using(board_no) group by board_no order by board_no desc limit ?, ?
+[2024-10-15 10:30:18:14336] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : ==> Parameters: 0(Integer), 6(Integer)
+[2024-10-15 10:30:18:14342] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.BoardMapper.findAll     : <==      Total: 6
+[2024-10-15 10:30:18:14342] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==>  Preparing: select count(*) from tbl_board
+[2024-10-15 10:30:18:14343] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : ==> Parameters: 
+[2024-10-15 10:30:18:14344] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.m.BoardMapper.getCount         : <==      Total: 1
+[2024-10-15 10:30:19:15121] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==>  Preparing: update tbl_board set view_count = view_count + 1 where board_no = ?
+[2024-10-15 10:30:19:15123] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:19:15128] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.m.B.updateViewCount            : <==    Updates: 1
+[2024-10-15 10:30:19:15129] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==>  Preparing: select * from tbl_board where board_no = ?
+[2024-10-15 10:30:19:15130] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:19:15132] DEBUG 47703 --- [nio-8181-exec-4] c.s.s.s.c.mapper.BoardMapper.findOne     : <==      Total: 1
+[2024-10-15 10:30:19:15174] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:30:19:15175] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:30:19:15178] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:30:19:15182] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:30:19:15182] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:19:15184] DEBUG 47703 --- [nio-8181-exec-7] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1
+[2024-10-15 10:30:23:19089] DEBUG 47703 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.save        : ==>  Preparing: insert into tbl_reply (reply_text, reply_writer, board_no, account) values(?, ?, ?, ?)
+[2024-10-15 10:30:23:19090] DEBUG 47703 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.save        : ==> Parameters: qwe(String), 이미지테스(String), 100(Integer), imgtest11(String)
+[2024-10-15 10:30:23:19092] DEBUG 47703 --- [nio-8181-exec-5] c.s.s.s.c.mapper.ReplyMapper.save        : <==    Updates: 1
+[2024-10-15 10:30:24:20260] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==>  Preparing: select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image from tbl_reply r left join tbl_member m using(account) where board_no = ? order by reply_no desc limit ?, ?
+[2024-10-15 10:30:24:20261] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.findAll     : ==> Parameters: 100(Integer), 0(Integer), 5(Integer)
+[2024-10-15 10:30:24:20265] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.findAll     : <==      Total: 5
+[2024-10-15 10:30:24:20266] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.count       : ==>  Preparing: select count(*) from tbl_reply where board_no = ?
+[2024-10-15 10:30:24:20266] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.count       : ==> Parameters: 100(Integer)
+[2024-10-15 10:30:24:20268] DEBUG 47703 --- [nio-8181-exec-6] c.s.s.s.c.mapper.ReplyMapper.count       : <==      Total: 1

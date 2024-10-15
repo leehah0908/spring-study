@@ -43,8 +43,8 @@
 
     <!-- 댓글 전체 목록 조회 -->
     <select id="findAll" resultType="reply">
-        select *
-        from tbl_reply
+        select account, reply_no, reply_text, reply_writer, reply_date, board_no, profile_image
+        from tbl_reply r left join tbl_member m using(account)
         where board_no = #{boardNo}
         order by reply_no desc
         limit #{page.pageStart}, #{page.amount}
