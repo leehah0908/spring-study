@@ -942,3 +942,10 @@
 [2024-10-15 15:36:43:1102] INFO  54680 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.028 seconds (process running for 1.157)
 [2024-10-15 15:36:54:12084] INFO  54680 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 [2024-10-15 15:36:54:12085] INFO  54680 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[2024-10-15 16:23:52:280] INFO  55823 --- [           main] c.s.s.SpringstudyApplication             : Starting SpringstudyApplication using Java 22.0.1 with PID 55823 (/Users/leehah/Playdata_backend/springstudy/build/classes/java/main started by leehah in /Users/leehah/Playdata_backend/springstudy)
+[2024-10-15 16:23:52:280] DEBUG 55823 --- [           main] c.s.s.SpringstudyApplication             : Running with Spring Boot v3.3.4, Spring v6.1.13
+[2024-10-15 16:23:52:281] INFO  55823 --- [           main] c.s.s.SpringstudyApplication             : No active profile set, falling back to 1 default profile: "default"
+[2024-10-15 16:23:53:1095] INFO  55823 --- [           main] c.s.s.SpringstudyApplication             : Started SpringstudyApplication in 1.021 seconds (process running for 1.154)
+[2024-10-15 16:24:32:40288] INFO  55823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+[2024-10-15 16:24:32:40289] INFO  55823 --- [nio-8181-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+[2024-10-15 16:24:41:48784] INFO  55823 --- [nio-8181-exec-7] c.s.s.s.c.service.KakaoLoginService      : 응답 JSON 데이터: {access_token=5fKVUfdivfIrCwRigerbmrL8-wzOTIsGAAAAAQo9c5oAAAGSjxCTYyrd4XW-Oo9G, token_type=bearer, refresh_token=aUyV_fS93xuWNgUYx6z3voPECWtRTCUaAAAAAgo9c5oAAAGSjxCTXyrd4XW-Oo9G, expires_in=21599, scope=account_email profile_image profile_nickname, refresh_token_expires_in=5183999}
