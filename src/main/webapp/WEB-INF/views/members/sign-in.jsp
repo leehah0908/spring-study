@@ -167,6 +167,12 @@ prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
                                             >
                                                 회원가입</a
                                             >
+                                            <a href="/kakao/login">
+                                                <img
+                                                    src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"
+                                                    alt="KakaoBtn"
+                                                />
+                                            </a>
                                         </td>
                                     </tr>
                                 </table>
