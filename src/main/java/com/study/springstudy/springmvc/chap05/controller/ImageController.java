@@ -1,12 +1,13 @@
 package com.study.springstudy.springmvc.chap05.controller;
 
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,13 +20,17 @@ import java.nio.file.Files;
 @Slf4j
 public class ImageController {
 
+    @Value("${file.upload.root-path}")
+    private String rootPath;
+
     // img 태그의 src 속성을 통래서 들어오는 요청 처리
     // 페이지가 랜더링될 때, img에 작성된 요청 url을 통해 비동기 방식의 요청이 들어옴
-    @GetMapping("/Users/leehah/Playdata_backend/upload")
-    public ResponseEntity<?> getImage(HttpServletRequest request) {
-        String uri = request.getRequestURI();
-
-        File file = new File(uri);
+    @GetMapping("/{y}/{m}/{d}/{fileName}")
+    public ResponseEntity<?> getImage(@PathVariable String y,
+                                      @PathVariable String m,
+                                      @PathVariable String d,
+                                      @PathVariable String fileName) {
+        File file = new File(String.format("%s/%s/%s/%s/%s", rootPath, y, m, d, fileName));
         ResponseEntity<byte[]> result = null;
         HttpHeaders headers = new HttpHeaders(); // 응답용 헤더 객체 설정
 

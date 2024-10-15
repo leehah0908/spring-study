@@ -4,6 +4,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DecimalFormat;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class FileUtils {
@@ -28,7 +30,11 @@ public class FileUtils {
         String fileType = profileImage.getOriginalFilename()
                 .substring(profileImage.getOriginalFilename().lastIndexOf("."));
 
-        File uploadPath = new File(rootPath, uuid + fileType);
+        // 날짜별로 관리하기 위해 날짜별 폴더 생성
+        String fullPath = makeDateFormatDirectory(rootPath);
+
+        // return에서는 풀 경로를 사용하지 않지만 업로드 할떄는 풀 경로가 필요하기 때문에 아래 로직이 필요함
+        File uploadPath = new File(fullPath, uuid + fileType);
 
         try {
             profileImage.transferTo(uploadPath);
@@ -36,6 +42,42 @@ public class FileUtils {
             e.printStackTrace();
         }
 
-        return uploadPath.getPath();
+        return uploadPath.getPath().substring(rootPath.length());
+    }
+
+    /**
+     * 루트 경로를 받아서 일자별로 폴더를 생성한 후
+     * 루트 경로 + 날짜폴더 경로를 반환
+     *
+     * @param rootPath - 파일 업로드 루트 경로  (ex) D:/spring-prj/upload
+     * @return - 날짜 폴더 경로가 포함된 새로운 업로드 경로
+     * (ex)  D:/spring-prj/upload/2023/12/29
+     */
+    private static String makeDateFormatDirectory(String rootPath) {
+        // 오늘 날짜 정보 출력
+        LocalDateTime now = LocalDateTime.now();
+        int year = now.getYear();
+        int month = now.getMonthValue();
+        int day = now.getDayOfMonth();
+
+        String[] dateInfo = {year + "", len2(month), len2(day)};
+        String directoryPath = rootPath;
+
+        for (String s : dateInfo) {
+            directoryPath += "/" + s;
+            File f = new File(directoryPath);
+            if (!f.exists()) f.mkdir();
+        }
+        return directoryPath;
+    }
+
+    /**
+     * 한글자 월과 한글자 일자를 두글자로 변환해주는 메서드
+     * ex)  2023-6-7   => 2023-06-07
+     * @param n - 원본 일자나 월자
+     * @return - 앞에 0이붙은 일자나 월자
+     */
+    private static String len2(int n) {
+        return new DecimalFormat("00").format(n);
     }
 }
